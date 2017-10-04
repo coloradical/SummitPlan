@@ -5,7 +5,7 @@ The go-to website for planning your next 14er adventure!
 The Mountaineers
 
 ## Team Members
-Megan Byers, Lucas Reed, Lindsay Walton & Elliot Whitehead
+[Megan Byers](https://github.com/coloradical), [Lucas Reed](https://github.com/lure7991), [Lindsay Walton](https://github.com/lawalton) & [Elliot Whitehead](https://github.com/elliotwhitehead)
 
 ## Description
 Summit Plan is a website that allows you to enter criteria to find the perfect 14er (or hiking trails depending on how much effort we want to put in this) to hike.
