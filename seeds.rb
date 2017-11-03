@@ -1,169 +1,35 @@
-fourteener_list = [
-	["Peak Name ",123],
-	["Antero",14269],
-	["Belford",14197],
-	["Bierdstadt & Sawtooth & Evans",14264],
-	["Blanca ",14345],
-	["Blanca & Ellingwood",14345],
-	["Bross",14172],
-	["Castle",14265],
-	["Castle & Conundrum",14265],
-	["Columbia",14073],
-	["Crestone Needle",14197],
-	["Crestone Peak ",14294],
-	["Crestone Peak & Crestone Needle",14292],
-	["Democrat & Lincoln & Cameron & Bross",14286],
-	["El Diente",14159],
-	["Elbert",14433],
-	["Ellingwood",14042],
-	["Evans ",14264],
-	["Grays",14270],
-	["Grays & Torreys",14270],
-	["Harvard",14420],
-	["Harvard & Columbia",14420],
-	["Kit Carson ",14081],
-	["La Plata",14336],
-	["Lincoln",14286],
-	["Little Bear Peak ",14037],
-	["Longs",14255],
-	["Massive ",14421],
-	["Oxford & Belford",14197],
-	["Princeton",14197],
-	["Qundary",14265],
-	["Shavano",14229],
-	["Shavano & Tabeguache",14229],
-	["Tabeguache",14155],
-	["Torreys",14267],
-	["Uncompahgre",14309],
-	["Wilson",14246],
-	["Yale",14196]
+fourteeners_attributes = [ 
+	{ name: 'Grays Peak', elevation: 14027 },
+	{ name: 'Torreys Peak', elevation: 14148 },
+	{ name: 'Mount Sherman', elevation: 500 }
 ]
 
-route_list = [
-	["Peak Name ","Distance (RT)","Elevation Gain","Exposure","Difficulty","Route Name "],
-	["Little Bear Peak",14,6200,4,4,"West Ridge & Southwest Face "],
-	["Little Bear Peak ",3.5,2300,4,4,"Lake Como "],
-	["Ellingwood ",17,6200,2,2.5,"Ellingwood Point - South Face "],
-	["Ellingwood",15,2200,4,3,"Southwest Ridge "],
-	["Ellingwood",11.6,5500,3,3,"North Ridge via South Zapata Creek (C2 Couloir)"],
-	["Ellingwood",12.1,5900,3,3,"North Ridge via South Zapata Creek (C3 Couloir)"],
-	["Ellingwood",12.7,6800,3,3,"North Ridge Via South Zapata Creek "],
-	["Columbia",11.5,4250,2,2,"West Slopes"],
-	["Columbia",12,4800,2,2,"Southeast Ridge "],
-	["Columbia",10.5,4250,2,2,"Southwest Couloir - Upper TH "],
-	["Columbia",14,4800,2,2,"Southwest Couloir - Harvard Lakes TH "],
-	["Columbia",16.5,5100,2,2,"Southwest Couloir - winter closure "],
-	["Kit Carson ",12.5,5400,2,2.5,"Challenger Point - North Slope"],
-	["Kit Carson ",14.5,6250,3,2.9,"Challenger Point - North Slope"],
-	["Kit Carson ",14.5,5900,4,3.5,"East Ridge (4WD)"],
-	["Kit Carson ",20,7050,4,3.5,"East Ridge"],
-	["Tabeguache",8,4000,2,2,"West Ridge "],
-	["El Diente",12,5500,3,3,"North Slopes (Rock of Ages TH)"],
-	["El Diente ",15,5000,3,3,"North Slopes (Navajo Basin TH)"],
-	["El Diente",12,4300,3,3,"South Slopes "],
-	["El Diente",14,5000,5,4,"North Buttress (Navajo Basin TH)"],
-	["Bross",9,2900,1,1,"East Slopes from Mineral Park Mine"],
-	["Bross",3.25,2250,2,2,"West Slopes"],
-	["Bross",9.5,3250,1,2,"South Gully (Paris Mill)"],
-	["Bross",6,2600,1,2,"South Gully (Sweet Home Mine)"],
-	["Bross",4,2900,1,2,"Dolly Varden Gully"],
-	["Bross",5,3100,1,2,"East Slopes from Moose Creek"],
-	["Yale",9.5,4300,2,2,"Southwest Slopes "],
-	["Yale",10.5,5000,2,2,"East Ridge "],
-	["Crestone Needle",12,4400,4,3,"South Face (4WD)"],
-	["Crestone Needle",18,5550,4,3,"South Face "],
-	["Crestone Needle",11.25,4400,5,5,"Ellingwood Arete/Ledges"],
-	["Belford",8,4500,1,2,"Northwest Ridge"],
-	["Oxford & Belford",11,5800,2,2,"Via Mt Belford"],
-	["Princeton",6.5,3200,2,2,"East Slopes (4WD)"],
-	["Princeton",13.25,5400,2,2,"East Slopes"],
-	["Shavano",9.25,4600,2,2,"East Slopes "],
-	["Shavano & Tabeguache",11.25,5600,2,2,"Via Mt Shavano"],
-	["Shavano",7.5,4600,2,2,"Angel of Shavano"],
-	["Wilson",10,3800,4,3,"Southwest Ridge (Rock of Ages TH)"],
-	["Wilson",16,5000,4,3,"Southwest Ridge (Navajo Basin TH)"],
-	["Wilson",11,5300,4,4,"North Slopes (Rock of Ages TH)"],
-	["Wilson",16,5100,4,4,"North Slopes (Navajo Basin TH)"],
-	["Wilson",12.5,4400,3,3,"Southwest Slopes "],
-	["Wilson",12,4900,3,3,"East Face "],
-	["Longs",14.5,5100,3,3,"Keyhole Route"],
-	["Longs ",13,5300,4,3,"Loft - via East Longs TH"],
-	["Longs",16,5900,3,3,"Keplinger's Couloir"],
-	["Evans ",17.5,5600,2,2,"West Ridge via Chicago Creek"],
-	["Evans ",5.5,2000,2,2,"West Ridge via Mt Spalding (return over Mt Spalding)"],
-	["Evans ",4.5,2000,2,2,"West Ridge via Mt Spalding (Summit Lake)"],
-	["Evans ",9.25,3100,1,2,"West Ridge via Guanella Pass"],
-	["Bierdstadt & Sawtooth & Evans",10.25,3900,3,3,"Bierdstadt, Sawtooth & Evans Combo"],
-	["Evans ",5.25,1650,4,3,"West Ridge via West Gully (return via Gully)"],
-	["Evans ",4,1650,4,3,"West Ridge via West Gully (descend North Face) "],
-	["Evans ",3.5,1475,2,1,"Northeast Face"],
-	["Evans ",18,4800,2,2,"Goliath, Rogers, Warren & Evans (return via Mt Evans Road)"],
-	["Evans ",16,5800,2,2,"Goliath, Rogers, Warren & Evans (round trip)"],
-	["Evans ",2,1500,3,3,"North Face Moderate"],
-	["Evans ",2,1500,4,3,"North Face Steep"],
-	["Castle",7,3100,3,2.5,"Northeast Ridge (4WD)"],
-	["Castle",13.5,4600,3,2.5,"Northeast Ridge "],
-	["Castle",7,3100,3,2.5,"Northwest Ridge (4WD)"],
-	["Castle",13.5,4600,3,2.5,"Northwest Ridge "],
-	["Castle",10.5,4200,3,2.5,"North Face Couloir (upper TH)"],
-	["Castle",13,4600,3,2.5,"North Face Couloir (main TH)"],
-	["Castle & Conundrum",8,3350,3,2.5,"Castle & Conundrum (upper TH)"],
-	["Castle & Conundrum",14.5,4850,3,2.5,"Castle & Conundrum (main TH)"],
-	["Quandary ",6.75,3450,1,1,"East Ridge "],
-	["Quandary ",2,2575,2,2.5,"Cristo Couloir "],
-	["Quandary",4,2650,4,3,"West Ridge "],
-	["Qundary",5.25,3250,3,3,"Quandary Couloir "],
-	["Torreys",8,3000,1,2,"South Slopes "],
-	["Torreys",6.75,3100,4,3,"Kelso Ridge"],
-	["Torreys",6.5,3000,3,3,"Dead Dog Couloir "],
-	["Torreys",2.75,3000,2,2.5,"Grizzly Gulch "],
-	["Torreys",8,4000,2,2.5,"Grizzly Gulch (bottom of road)"],
-	["Torreys",10.5,4500,2,2.5,"Grizzly Gulch (i-70)"],
-	["Torreys",2.75,3300,3,3,"Emperor Couloir "],
-	["Torreys",7,4000,3,3,"Emperor Couloir (bottom of Grizzly Gulch)"],
-	["Torreys",9,4500,3,3,"Emperor Couloir (i-70)"],
-	["Torreys",10,5500,2,2,"West Ridge "],
-	["Antero",7,2400,2,2,"West Slopes (4WD)"],
-	["Antero",16,5200,2,2,"West Slopes"],
-	["Grays",8,3000,1,1,"East Slopes "],
-	["Grays ",7,3250,2,2,"South Ridge (Shoe Basin Mine)"],
-	["Grays",16.5,3250,2,2,"South Ridge (Winter TH) "],
-	["Grays & Torreys",8.5,3600,1,2,"Grays & Torreys"],
-	["Grays ",6.5,3000,3,3,"Lost Rat Couloir "],
-	["Grays",10.25,3800,1,2,"Southwest Ridge "],
-	["Lincoln",6,2600,1,2,"West Ridge "],
-	["Lincoln",4.75,3400,2,2,"Lincoln Amphitheatre"],
-	["Lincoln",6.5,2650,1,2,"East Slope (jeep trail) "],
-	["Lincoln",4.5,2800,1,2,"East Slope (direct route)"],
-	["Democrat & Lincoln & Cameron & Bross",7.25,3700,2,2,"Democrat, Cameron, Lincoln, Bross"],
-	["Crestone Peak & Crestone Needle",20,6450,5,5,"Crestones Traverse "],
-	["Crestone Peak",14,5700,3,3,"South Face (4WD) "],
-	["Crestone Peak ",20,6850,3,3,"South Face "],
-	["Crestone Peak & Crestone Needle",14,5300,5,5,"Crestones Traverse (4WD)"],
-	["Uncompahgre",7.5,3000,2,2,"South Ridge from Nellie Creek (4WD)"],
-	["Uncompahgre",15.5,5505,2,2,"South Ridge from Nellie Creek "],
-	["La Plata",9.25,4500,2,2,"Northwest Ridge "],
-	["La Plata",7,3380,2,2,"Southwest Ridge "],
-	["La Plata",9.5,5900,4,3,"Ellingwood Ridge"],
-	["Blanca ",17,6500,3,2.5,"Northwest Approach "],
-	["Blanca & Ellingwood",18,6800,4,3,"Blanca & Ellingwood"],
-	["Harvard",14,4600,2,2,"South Slopes "],
-	["Harvard",14,4600,2,2,"South Face"],
-	["Harvard & Columbia",15,6100,2,2,"Harvard & Columbia Traverse"],
-	["Massive ",14.5,4500,2,2,"East Slopes "],
-	["Massive ",8,3950,2,2,"Southwest Slopes "],
-	["Massive ",14,4800,2,2.5,"East Ridge "],
-	["Elbert",9.5,4700,1,1,"Northeast Ridge "],
-	["Elbert",10,4100,1,1,"East Ridge "],
-	["Elbert",11,5300,1,2,"Southeast Ridge "],
-	["Elbert",8.5,4150,3,2.5,"Box Creek Couloirs "],
-	["Kit Carson ",11.4,5315,4,4,"North Ridge"]
+trails_data = [
+  	{
+  		attributes: {name: 'Grays and Torreys trail', distance: 12, elevation_gain: 2000 },
+	    fourteener_names: ['Grays Peak', 'Torreys Peak']
+	},
+
+    {
+    	attributes: { name: 'ol Sherman', distance: 3.87, elevation_gain: 500 },
+    	fourteener_names: ['Mount Sherman']
+    }
 ]
 
-route_list.each do |peak,distance,elev_gain,exposure,diff,name|
-	Hike.create(peak: peak, distance: distance, elev_gain: elev_gain, exposure: exposure, diff: diff,name:name)
+fourteeners_count = 0
+fourteeners_attributes.each do |attributes|
+	Fourteener.create!(attributes)
+	fourteeners_count += 1
 end
+puts "created #{fourteeners_count} fourteeners"
 
-fourteener_list.each do |peak, elevation|
-	Fourteener.create(peak:peak, elevation:elevation)
+
+trails_count = 0
+trails_data.each do |datum|
+	trail = Trail.create!(datum[:attributes])
+
+	trail.fourteeners = datum[:fourteener_names].map{ |name| Fourteener.find_by(name: name) }
+
+	trails_count += 1
 end
+puts "created #{trails_count} trails"
