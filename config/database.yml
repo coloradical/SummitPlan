@@ -3,7 +3,7 @@ default: &default
   encoding: unicode
   host: db
   username: postgresql
-  password: DBPA55
+  password: pgpass
   pool: 5
 
 development:
