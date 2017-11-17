@@ -18,29 +18,27 @@ Summit Plan is a website that allows you to enter criteria to find the perfect 1
 * Tracks which 14ers or trails you've completed, along with your summit time
 * Overall interactive map showing where all the 14ers are
 
-## Vision Statement
-We want to make it easier for mountain enthusiasts to find the perfect 14er for their outing, and to ensure the safety and education of new climbers.
+## Installation
+You can easily install and set up this project thanks to containerization from [Docker](https://docker.com)!
 
-## Motivation
-Our team loves the outdoors and has experienced the struggle of trying to find information on these challenging mountains prior to climbing them. We want to make a beatiful, simple interface to find and browse information on Colorado's 14,000_ ft. peaks.
 
-## Risks
-* Our team has unequal experience with web development, and varying depths of understanding of programming
-* Using data from various APIs to bring together a cohesive webapp will present a number of challenges
+[Tip]: You'll need internet to source various dependencies to build the project, so a speedy internet connection will make this go smoother!
 
-## Risk Mitigation Plan
-* Assigning team members tasks that fit their skills - for example, giving programming heavy tasks to skilled programmers, and art heavy tasks to peple who like to design
-* Time management - everyone is busy so we need to adjust schedules to find a good time for everyone
-* Avoiding over-zealous scope - There's a million things this website could do well, given enough time, but we'll need to keep our scope and focus concise to deliver a working product my the end of the class
-
-## Version Control
-We will be using git and GitHub to collaborate on our project together. 
-
-## Development Method
-We will be using the Agile development method. Agile will allow for flexibility in the design of our product, and for thorough testing. By completing two week sprints, we will at any point be able to change our desing if the testing of the previous sprint did not go as planned. It also allows us to implement and relsase new features throughout the development of the project as needed.
-
-## Collaboration Tool
-We will be using Slack to communicate and collaborate. Slack allows us to easily discuss ideas with one another and share code and files. Its wide-ranging feature set will be benificial as we work remotely and together.
-
-## Proposed Architecture
-We'll be building our app on the Ruby on Rails web framework, likely along with a front-end CSS framework such as Boostratp or MaterializeCSS.
+1. Install Docker ([MacOS](https://docs.docker.com/docker-for-mac/install/), [Windows](https://docs.docker.com/docker-for-windows/install/)). During installation, you'll have the option to have the Docker Daemon boot with your operating system, and be available in the background, or elect to boot the Docker Daemon manually. The Docker Daemon needs to be running whenever you interact with Docker, so keep that in mind.
+  - I know what you're thinking: `"I have to download install something? Wasn't the point to avoid downloading / dealing with a VM?"` To which, I say: Not quite! The best part about Docker is the way it lets all of us teammates work on an identical environment to what is on production!
+2. Once the Docker daemon is up and running, simply navigate to the project directory (wherever the `Dockerfile` and `docker-compose.yml` files are) in the terminal, and run: `docker-compose build`
+  - Docker will then run off and pull down images (dependencies) required from the Dockerfile, and build a web server and database image to run the app, based on the specifications of the docker-compose.yml file.
+3. Great! You now have a Docker 'image' built. An image is essentially a bluebrint, or an _idea_ of the web app that we want to have. To bring an image to life, we have to **_run_** the image, creating a **_container_**!
+4. To compose the web app (and in the process, two containers - one for the RoR web server, and another for the Postgres db) simply run: `docker-compose up`
+  - Your terminal should go crazy as Docker lights up the two containers and tails the process logs to your terminal.
+  - You should now be able to visit [http://localhost:3000](http://localhost:3000) and seeeee `an error!`
+  - As you can see by the ActiveRecord error `NoDatabaseError`, Rails is unhappy with our database configuration. That's because while we have a Postgres process up and running, we haven't initialized the actual database yet.
+5. Open another terminal window, navigate to the project directory, and gracefully stop the app with `docker-compose stop`
+  - **_[IMPORTANT NOTE]:_** When your terminal is attached to the docker process, (i.e. you are seeing terminal logs output from the Rails and Postgres processes) do not use `ctrl+c` to stop the processes. Doing so _may_ cause an error the next time you run `docker-compose up` - If you ever get an error that reads `A server is already running. Check /myapp/tmp/pids/server.pid`, delete the file at `/tmp/pids/server.pid`, and run `docker-compose up` again.
+6. A quick peek at the file `/config/database.yml` file shows that Rails is looking for two databases: `summitplan_development` and `summitplan_test`, as well as a database user, `postgresql`. To create them, we'll use a Ruby build tool called [Rake](https://en.wikipedia.org/wiki/Rake_(software)) (comes built-in with Rails). To create the databases, run `docker-compose run web rake db:create`
+  - An anatomy of the command you just ran:
+    - `docker-compose run`: used to run a command against a docker-compose service
+    - `web`: the service to run the command against. `web` is the Rails web server described (and named 'web') in the docker-compose.yml file
+    - `rake db:create`: a ruby command which uses Rake to build and create our database, as described in the `config/database.yml` file
+7. Now, run `docker-compose up` again, and it should boot up with no problems!
+8. Hooray! You're done!
