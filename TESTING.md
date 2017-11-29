@@ -14,4 +14,5 @@ We want to make it easier for mountain enthusiasts to find the perfect 14er for 
 Explanation and Screenshot (see above)
 
 ## User Acceptance Tests
-Copy of at least three UAT plans
+We have developed a thorough User Acceptance Test Plan. The test plan can be viewed on Google Sheets. The link is provided below.
+https://docs.google.com/a/colorado.edu/spreadsheets/d/1p6VKrApZlqryOEQcsZAQLqm5zARcsa4PWjxFAaGXUNI/edit?usp=sharing 
