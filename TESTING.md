@@ -10,5 +10,8 @@ The Mountaineers
 ## Vision Statement
 We want to make it easier for mountain enthusiasts to find the perfect 14er for their outing, and to ensure the safety and education of new climbers.
 
-Automated Tests: Explanation and Screenshot (see above)
-User Acceptance Tests: Copy of at least three UAT plans
+## Automated Tests
+Explanation and Screenshot (see above)
+
+## User Acceptance Tests
+Copy of at least three UAT plans
