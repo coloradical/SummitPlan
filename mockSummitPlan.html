@@ -1,0 +1,86 @@
+<widtwidtwidtwidtwidtwidtwidtwidtwidtwidtwidtwidtwidtwidtwidtwidtwidtwidt!DOCTYPE htmlnformati>
+<html>
+<head>
+<style> 
+.flex-container {
+    display: -webkit-flex;
+    display: flex;  
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    text-align: center;
+	transform: scale(1.1)
+	transform-origin: 0 0;
+	width: 100vw;
+	height: 50vw;
+}
+
+flex-rectangle {
+	width: 100%;
+	background: black;
+}
+
+
+.flex-container > * {
+    padding: 15px;
+    -webkit-flex: 1 100%;
+    flex: 1 100%;
+}
+
+.article {
+    text-align: left;
+}
+
+header {background: #081723; color:white; font-family:"Futura"; line-height:18px;}
+ody {background: linear-gradient(to bottom, #081723 71%, #ffffff 133%); color: white;}
+.nav {background:black;}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+.nav ul a {
+    text-decoration: none;
+}
+
+@media all and (min-width: 768px) {
+    .nav {text-align:left;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1;}
+    .article {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
+    footer {-webkit-order:3;order:3;}
+}
+</style>
+</head>
+<body>
+
+
+
+<!--Navigation Bar-->
+<div class="flex-container">
+<header>
+	<img src="whiteLOGO.png" alt="SummitPlan Logo" align="left" width="20%" height="20%">
+	<br>
+	<br>
+	<h1 style="font-size: 160%; line-spacing:18px;">All the information you need to summit Colorado's 14,000 foot peaks.</h1>
+	<svg width="100%" height="100">
+  		<rect width="100%" height="1000" style="fill:black" />
+		  <text x="10%" y="50" font-family="Futura" font-size="15" fill="white"><a href="https://www.google.com">Find Your Perfect Fourteener</a></text>
+		  <text x="43%" y="50" font-family="Futura" font-size="15" fill="white">&#9830</text>
+		  <text x="50%" y="50" font-family="Futura" font-size="15" fill="white">Fourteener Profiles</text>
+		  <text x="72%" y="50" font-family="Futura" font-size="15" fill="white">&#9830</text>
+		  <text x="78%" y="50" font-family="Futura" font-size="15" fill="white">About the Makers</text>
+	</svg>
+</header>
+
+<div class="flex-rectangle:> <div>
+
+<article class="article">
+
+  <p>
+<iframe src="https://www.google.com/maps/embed?pb=!1m0!4v1512680585625!6m8!1m7!1sCAoSLEFGMVFpcFByOUhuMEpPWjhLckhaMW5YSkJUTGtxekhHQWZZb29EWE5nUUNF!2m2!1d40.2548483!2d-105.6152917!3f94.39035285796531!4f-2.2343073379163627!5f0.4000000000000002" width="1000" height="600" frameborder="0" style="border:0" allowfullscreen></iframe>
+</p>
+  <p><strong>Resize this page to see that what happens!</strong></p>
+</article>
+
+</div>
+
+</body>
+</html>
