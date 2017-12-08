@@ -12,7 +12,7 @@ We want to make it easier for mountain enthusiasts to find the perfect 14er for 
 
 ## Automated Tests
 For automated testing, we will be using [Minitest](http://ruby-doc.org/stdlib-2.0.0/libdoc/minitest/rdoc/MiniTest.html) which comes built-in with [Rails](http://guides.rubyonrails.org/testing.html)!
-For testing, we first write test in the appropriate ruby file. For example, I'll illustrate what it looks like to run a simple autmoated test on our `Fourteener` object.
+For testing, we first write tests in the appropriate ruby file. For example, I'll illustrate what it looks like to run a simple autmoated test on our `Fourteener` class.
 
 Here's the test which validate that a `fourteener` cannot be saved to our database without a name.
 
