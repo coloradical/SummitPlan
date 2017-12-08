@@ -100,5 +100,8 @@ Success! 1 test ran, 0 failed! And so goes our automated testing...
 
 
 ## User Acceptance Tests
-We have developed a thorough User Acceptance Test Plan. The test plan can be viewed on Google Sheets. The link is provided below.
-https://docs.google.com/a/colorado.edu/spreadsheets/d/1p6VKrApZlqryOEQcsZAQLqm5zARcsa4PWjxFAaGXUNI/edit?usp=sharing 
+| UAT # |                     Action                     | Expected Outcome                                                                     | Pass | Fail |
+|-------|:----------------------------------------------:|--------------------------------------------------------------------------------------|------|------|
+| 1     | Load the webpage to see fourteeners on map     | Main page loads, Google Maps displayed, fourteeners visible on map                   |      |      |
+| 2     | Filter list of fourteeners based on difficulty | Google map shows the updated list of fourteeners that match the requested diffeculty |      |      |
+| 3     | Post a comment about a fourteener route        | Comment shows up on that fourteener's listing                                        |      |      |
