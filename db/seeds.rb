@@ -349,6 +349,47 @@ trails_data=[
 		attributes:{ name:"Needleton", elevation_gain_in_feet:3000, round_trip_distance_in_miles:5.2, no_4wd_additional_elevation_in_feet: 3200, no_4wd_additional_distance_in_miles:12, route_name:"South Ridge ", trailhead_lat:37.63333, trailhead_long:-107.69278, four_x_four_required:TRAIN, additional_info_url:"https://www.14ers.com/route.php?route=neol4&peak=Mt.+Eolus%2C+Windom+Peak%2C+and+Sunlight+Peak"},
 		fourteener_names: ["North Eolus"]
 	},
+	{
+		attributes:{ name:"Grays Peak", elevation_gain_in_feet:3600, round_trip_distance_in_miles:8.5, no_4wd_additional_elevation_in_feet:0, no_4wd_additional_distance_in_miles:0, route_name:"Grays & Torreys", trailhead_lat:39.66087, trailhead_long:-105.78462, four_x_four_required:1.5, additional_info_url:"https://www.14ers.com/route.php?route=torr5&peak=Grays+Peak+and+Torreys+Peak
+"},
+		fourteener_names: ["Grays","Torreys"]
+	},
+	{
+		attributes:{ name:"Castle Creek", elevation_gain_in_feet:3350, round_trip_distance_in_miles:8, no_4wd_additional_elevation_in_feet:1500, no_4wd_additional_distance_in_miles:6.5, route_name:"Castle & Conundrum", trailhead_lat:39.0289, trailhead_long:-106.80801, four_x_four_required:2, additional_info_url:"https://www.14ers.com/route.php?route=cast4&peak=Castle%20Peak%20and%20Conundrum%20Peak
+"},
+		fourteener_names: ["Conundrum","Castle"]
+	},
+	{
+		attributes:{ name:"Kite Lake", elevation_gain_in_feet:3700, round_trip_distance_in_miles:7.25, no_4wd_additional_elevation_in_feet:0, no_4wd_additional_distance_in_miles:0, route_name:"Democrat, Cameron, Lincoln & Bross", trailhead_lat: 39.32758, trailhead_long:-106.12928, four_x_four_required:1, additional_info_url:"https://www.14ers.com/route.php?route=bros6&peak=Mt.%20Bross"},
+		fourteener_names: ["Democrat","Cameron"]
+	},
+	{
+		attributes:{ name:"North Cottonwood Creek", elevation_gain_in_feet:4450, round_trip_distance_in_miles:7, no_4wd_additional_elevation_in_feet:1650, no_4wd_additional_distance_in_miles:8, route_name:"Harvard & Columbia Traverse", trailhead_lat:38.87057, trailhead_long:-106.2658, four_x_four_required:1, additional_info_url:"https://www.14ers.com/route.php?route=harv4&peak=Mt.%20Harvard%20and%20Mt.%20Columbia
+"},
+		fourteener_names: ["Harvard","Columbia"]
+	},
+	{
+		attributes:{ name:"South Colony Lakes", elevation_gain_in_feet:5300, round_trip_distance_in_miles:14, no_4wd_additional_elevation_in_feet:1150, no_4wd_additional_distance_in_miles:6, route_name:"Crestones Traverse", trailhead_lat:37.97611, trailhead_long:-105.50651, four_x_four_required:1.5, additional_info_url:"https://www.14ers.com/route.php?route=cnee3&peak=Crestone%20Peak%20and%20Crestone%20Needle
+"},
+		fourteener_names: ["Crestone","Crestone Needle"]
+	},
+	{
+		attributes:{ name:"Lake Como ", elevation_gain_in_feet:3000, round_trip_distance_in_miles:7, no_4wd_additional_elevation_in_feet:3800, no_4wd_additional_distance_in_miles:11, route_name:"Blanca & Ellingwood", trailhead_lat:37.53861, trailhead_long:-105.57611, four_x_four_required:3, additional_info_url:"https://www.14ers.com/route.php?route=elli3&peak=Blanca"},
+		fourteener_names: ["Blanca","Ellingwood"]
+	},
+	{
+		attributes:{ name:"Navajo Lake", elevation_gain_in_feet:3800, round_trip_distance_in_miles:4, no_4wd_additional_elevation_in_feet:3300, no_4wd_additional_distance_in_miles:3, route_name:"Wilson & El Diente Traverse", trailhead_lat:37.80339, trailhead_long:-108.06378, four_x_four_required:0.5, additional_info_url:"https://www.14ers.com/route.php?route=mwil5&peak=Mt.%20Wilson"},
+		fourteener_names: ["Wilson","El Diente"]
+	},
+	{
+		attributes:{ name:"Maroon Lake", elevation_gain_in_feet:4850, round_trip_distance_in_miles:9.5, no_4wd_additional_elevation_in_feet:0, no_4wd_additional_distance_in_miles:0, route_name:"Bells Traverse", trailhead_lat:39.09862, trailhead_long:-106.94064, four_x_four_required:0, additional_info_url:"https://www.14ers.com/route.php?route=nmar4&peak=The%20Maroon%20Bells
+"},
+		fourteener_names: ["North Maroon","Maroon"]
+	},
+	{
+		attributes:{ name:"Guanella Pass", elevation_gain_in_feet:3900, round_trip_distance_in_miles:10.25, no_4wd_additional_elevation_in_feet:0, no_4wd_additional_distance_in_miles:0, route_name:"Bierstadt & Evans", trailhead_lat:39.59688, trailhead_long:-105.71003, four_x_four_required:0, additional_info_url:"https://www.14ers.com/route.php?route=bier4&peak=Mt.%20Bierstadt"},
+		fourteener_names: ["Bierdstadt","Evans"]
+	}
 ]
 
 fourteeners_count = 0
