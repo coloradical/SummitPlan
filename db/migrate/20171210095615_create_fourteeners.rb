@@ -14,7 +14,7 @@ class CreateFourteeners < ActiveRecord::Migration[5.0]
       t.integer :elevation_gain_in_feet
       t.decimal :round_trip_distance_in_miles
       t.integer :no_4wd_additional_elevation_in_feet
-      t.decimal :no_4wd_additional_elevation_in_miles
+      t.decimal :no_4wd_additional_distance_in_miles
       t.string :route_name
       t.string :trailhead_name
       t.float :trailhead_lat

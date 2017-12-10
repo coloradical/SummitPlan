@@ -69,6 +69,6 @@ class FourteenersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def fourteener_params
-      params.require(:fourteener).permit(:name, :surname, :elevation_in_feet, :rank, :location_lat, :location_long, :forest, :range, :classification, :exposure, :elevation_gain_in_feet, :round_trip_distance_in_miles, :no_4wd_additional_elevation_in_feet, :no_4wd_additional_elevation_in_miles, :route_name, :trailhead_name, :trailhead_lat, :trailhead_long, :four_x_four_required, :additional_info_url, :description, :kml)
+      params.require(:fourteener).permit(:name, :surname, :elevation_in_feet, :rank, :location_lat, :location_long, :forest, :range, :classification, :exposure, :elevation_gain_in_feet, :round_trip_distance_in_miles, :no_4wd_additional_elevation_in_feet, :no_4wd_additional_distance_in_miles, :route_name, :trailhead_name, :trailhead_lat, :trailhead_long, :four_x_four_required, :additional_info_url, :description, :kml)
     end
 end

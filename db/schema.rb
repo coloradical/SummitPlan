@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171210033857) do
+ActiveRecord::Schema.define(version: 20171210095615) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20171210033857) do
     t.integer  "elevation_gain_in_feet"
     t.decimal  "round_trip_distance_in_miles"
     t.integer  "no_4wd_additional_elevation_in_feet"
-    t.decimal  "no_4wd_additional_elevation_in_miles"
+    t.decimal  "no_4wd_additional_distance_in_miles"
     t.string   "route_name"
     t.string   "trailhead_name"
     t.float    "trailhead_lat"
@@ -38,8 +38,8 @@ ActiveRecord::Schema.define(version: 20171210033857) do
     t.string   "additional_info_url"
     t.text     "description"
     t.binary   "kml"
-    t.datetime "created_at",                           null: false
-    t.datetime "updated_at",                           null: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
   end
 
 end
