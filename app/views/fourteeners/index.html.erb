@@ -1,0 +1,69 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Fourteeners</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Surname</th>
+      <th>Elevation in feet</th>
+      <th>Rank</th>
+      <th>Location lat</th>
+      <th>Location long</th>
+      <th>Forest</th>
+      <th>Range</th>
+      <th>Classification</th>
+      <th>Exposure</th>
+      <th>Elevation gain in feet</th>
+      <th>Round trip distance in miles</th>
+      <th>No 4wd additional elevation in feet</th>
+      <th>No 4wd additional elevation in miles</th>
+      <th>Route name</th>
+      <th>Trailhead name</th>
+      <th>Trailhead lat</th>
+      <th>Trailhead long</th>
+      <th>Four x four required</th>
+      <th>Additional info url</th>
+      <th>Description</th>
+      <th>Kml</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @fourteeners.each do |fourteener| %>
+      <tr>
+        <td><%= fourteener.name %></td>
+        <td><%= fourteener.surname %></td>
+        <td><%= fourteener.elevation_in_feet %></td>
+        <td><%= fourteener.rank %></td>
+        <td><%= fourteener.location_lat %></td>
+        <td><%= fourteener.location_long %></td>
+        <td><%= fourteener.forest %></td>
+        <td><%= fourteener.range %></td>
+        <td><%= fourteener.classification %></td>
+        <td><%= fourteener.exposure %></td>
+        <td><%= fourteener.elevation_gain_in_feet %></td>
+        <td><%= fourteener.round_trip_distance_in_miles %></td>
+        <td><%= fourteener.no_4wd_additional_elevation_in_feet %></td>
+        <td><%= fourteener.no_4wd_additional_elevation_in_miles %></td>
+        <td><%= fourteener.route_name %></td>
+        <td><%= fourteener.trailhead_name %></td>
+        <td><%= fourteener.trailhead_lat %></td>
+        <td><%= fourteener.trailhead_long %></td>
+        <td><%= fourteener.four_x_four_required %></td>
+        <td><%= fourteener.additional_info_url %></td>
+        <td><%= fourteener.description %></td>
+        <td><%= fourteener.kml %></td>
+        <td><%= link_to 'Show', fourteener %></td>
+        <td><%= link_to 'Edit', edit_fourteener_path(fourteener) %></td>
+        <td><%= link_to 'Destroy', fourteener, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Fourteener', new_fourteener_path %>
