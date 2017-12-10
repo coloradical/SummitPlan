@@ -172,7 +172,7 @@ fourteeners_attributes=[
 		trailhead_name:"Needleton",
 		trailhead_lat:37.63333,
 		trailhead_long:-107.69278,
-		four_x_four_required:TRAIN,
+		four_x_four_required:0,
 		additional_info_url:"https://www.14ers.com/route.php?route=eolu3&peak=Mt.+Eolus%2C+Windom+Peak%2C+and+Sunlight+Peak"
 	},
 	{
@@ -964,7 +964,7 @@ fourteeners_attributes=[
 		trailhead_name:"Needleton",
 		trailhead_lat:37.63333,
 		trailhead_long:-107.69278,
-		four_x_four_required:TRAIN,
+		four_x_four_required:0,
 		additional_info_url:"https://www.14ers.com/route.php?route=sunl2&peak=Mt.+Eolus%2C+Windom+Peak%2C+and+Sunlight+Peak"
 	},
 	{
@@ -1118,7 +1118,7 @@ fourteeners_attributes=[
 		trailhead_name:"Needleton",
 		trailhead_lat:37.63333,
 		trailhead_long:-107.69278,
-		four_x_four_required:TRAIN,
+		four_x_four_required:0,
 		additional_info_url:"https://www.14ers.com/route.php?route=wind1&peak=Mt.+Eolus%2C+Windom+Peak%2C+and+Sunlight+Peak"
 	},
 	{
