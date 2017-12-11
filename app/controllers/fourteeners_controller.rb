@@ -5,6 +5,7 @@ class FourteenersController < ApplicationController
   # GET /fourteeners.json
   def index
     @fourteeners = Fourteener.all
+	gon.fourteeners = Fourteener.all
   end
 
   # GET /fourteeners/1

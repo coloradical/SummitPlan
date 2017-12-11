@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<%= include_gon(:init => true) %>
 		<style>
 			#map {
 				width: 100%;
@@ -32,6 +33,9 @@
 		</script>
 		<script async defer
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBYkGDkbDQBSWK4WoQM-r8tA5WXkqu_Rw&callback=initMap">
+		</script>
+		<script>
+			alert(gon.fourteeners);
 		</script>
 	</body>
 </html>
