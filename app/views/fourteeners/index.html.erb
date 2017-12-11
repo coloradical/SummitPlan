@@ -15,24 +15,51 @@
 		<div id="map"></div>
 		<script>
 			function initMap() {
-				var elbert = {lat: 39.1178, lng: -106.4452};
+			var elbert = {lat: 39.118075, lng: -106.445417};
 				var map = new google.maps.Map(document.getElementById('map'), {
 					zoom: 7,
 					center: elbert
 				});
-				var marker = new google.maps.Marker({
-					position: elbert,
-					map: map
-				});
-				var marker2 = new google.maps.Marker({
-					position: {lat: 39.582638, lng: -105.66861},
-					map: map
-				});
 				console.log(gon.fourteeners);
 				gon.fourteeners.forEach(function(fourteener){
+					if (fourteener.surname == "Mount") {
+						var full_name = fourteener.surname +" " +fourteener.name;
+					} else if (fourteener.surname == "Peak"){
+						var full_name = fourteener.name + " " +fourteener.surname;
+					} else if (fourteener.surname == "Mount of the"){
+						var full_name = fourteener.surname +fourteener.name;
+					} else if (fourteener.surname == "Mountain"){
+						var full_name = fourteener.name +" " +fourteener.surname;
+					} else if (fourteener.surname == "Needle"){
+						var full_name = fourteener.name +" " +fourteener.surname;
+					} else if (fourteener.surname == "Point"){
+						var full_name = fourteener.name +" " +fourteener.surname;
+					} else {
+						var full_name = fourteener.name;
+					}
 					var marker = new google.maps.Marker({
 						position: {lat: fourteener.location_lat, lng: fourteener.location_long},
-						map: map
+						map: map,
+						title: full_name,
+						surname: fourteener.surname,
+						elevation_in_feet: fourteener.elevation_in_feet,
+						rank: fourteener.rank,
+						location_lat: fourteener.location_lat,
+						location_long: fourteener.location_long,
+						forest: fourteener.forest,
+						range: fourteener.range,
+						classification: fourteener.classification,
+						exposure: fourteener.exposure,
+						elevation_gain_in_feet: fourteener.elevation_gain_in_feet,
+						round_trip_distance_in_miles: fourteener.round_trip_distance_in_miles,
+						no_4wd_additional_elevation_in_feet: fourteener.no_4wd_additional_elevation_in_feet,
+						no_4wd_additional_distance_in_miles: fourteener.no_4wd_additional_distance_in_miles,
+						route_name: fourteener.route_name,
+						trailhead_name: fourteener.trailhead_name,
+						trailhead_lat: fourteener.trailhead_lat,
+						trailhead_long: fourteener.trailhead_long,
+						four_x_four_required: fourteener.four_x_four_required,
+						additional_info_url: fourteener.additional_info_url
 					}); 
 				});
 			}
