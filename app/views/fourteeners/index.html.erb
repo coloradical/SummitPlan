@@ -2,12 +2,20 @@
 <html>
 	<head>
 		<%= include_gon(:init => true) %>
+		<meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+		<meta charset="utf-8">
 		<style>
-			#map {
-				width: 100%;
-				height: 500px;
-				background-color: grey;
-			}
+		  /* Always set the map height explicitly to define the size of the div
+		   * element that contains the map. */
+		  #map {
+			height: 100%;
+		  }
+		  /* Optional: Makes the sample page fill the window. */
+		  html, body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		  }
 		</style>
 	</head>
 	<body>
@@ -20,14 +28,13 @@
 					zoom: 7,
 					center: elbert
 				});
-				console.log(gon.fourteeners);
 				gon.fourteeners.forEach(function(fourteener){
 					if (fourteener.surname == "Mount") {
 						var full_name = fourteener.surname +" " +fourteener.name;
 					} else if (fourteener.surname == "Peak"){
 						var full_name = fourteener.name + " " +fourteener.surname;
 					} else if (fourteener.surname == "Mount of the"){
-						var full_name = fourteener.surname +fourteener.name;
+						var full_name = fourteener.surname +" "+fourteener.name;
 					} else if (fourteener.surname == "Mountain"){
 						var full_name = fourteener.name +" " +fourteener.surname;
 					} else if (fourteener.surname == "Needle"){
@@ -60,7 +67,33 @@
 						trailhead_long: fourteener.trailhead_long,
 						four_x_four_required: fourteener.four_x_four_required,
 						additional_info_url: fourteener.additional_info_url
-					}); 
+					});
+					var contentString = '<div id="content">'+
+					  '<div id="siteNotice">'+
+					  '</div>'+
+					  '<h1 id="firstHeading" class="firstHeading">'+full_name+'</h1>'+
+					  '<div id="bodyContent">'+
+					  '<p>Elevation: '+marker.elevation_in_feet+' feet</br>'+
+					  'Class: '+marker.classification+'</br>'+
+					  'Range: '+marker.range+'</br>'+
+					  'Forest: '+marker.forest+'</br>'+
+					  'Route name: '+marker.route_name+'</br>'+
+					  'Trailhead name: '+marker.trailhead_name+'</br>'+
+					  'Round trip distance: '+marker.round_trip_distance_in_miles+' miles</br>'+
+					  'Elevation gain: '+marker.elevation_gain_in_feet+' feet</br></p>'+
+					  '<p>Additional info: <a href='+marker.additional_info_url+'>'+
+					  +'More information'+'</a></p>'+
+					  '</div>'+
+					  '</div>';
+					var infowindow = new google.maps.InfoWindow({
+					  content: contentString,
+					  position: marker.getPosition()
+					});
+					marker.addListener('click', function() {
+					  map.setZoom(9);
+					//  map.setCenter(marker.getPosition());
+					  infowindow.open(marker.get('map'), marker);
+					});
 				});
 			}
 		</script>
