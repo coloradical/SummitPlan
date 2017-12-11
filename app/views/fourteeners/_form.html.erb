@@ -1,0 +1,127 @@
+<%= form_for(fourteener) do |f| %>
+  <% if fourteener.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(fourteener.errors.count, "error") %> prohibited this fourteener from being saved:</h2>
+
+      <ul>
+      <% fourteener.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :surname %>
+    <%= f.text_field :surname %>
+  </div>
+
+  <div class="field">
+    <%= f.label :elevation_in_feet %>
+    <%= f.number_field :elevation_in_feet %>
+  </div>
+
+  <div class="field">
+    <%= f.label :rank %>
+    <%= f.number_field :rank %>
+  </div>
+
+  <div class="field">
+    <%= f.label :location_lat %>
+    <%= f.text_field :location_lat %>
+  </div>
+
+  <div class="field">
+    <%= f.label :location_long %>
+    <%= f.text_field :location_long %>
+  </div>
+
+  <div class="field">
+    <%= f.label :forest %>
+    <%= f.text_field :forest %>
+  </div>
+
+  <div class="field">
+    <%= f.label :range %>
+    <%= f.text_field :range %>
+  </div>
+
+  <div class="field">
+    <%= f.label :classification %>
+    <%= f.text_field :classification %>
+  </div>
+
+  <div class="field">
+    <%= f.label :exposure %>
+    <%= f.number_field :exposure %>
+  </div>
+
+  <div class="field">
+    <%= f.label :elevation_gain_in_feet %>
+    <%= f.number_field :elevation_gain_in_feet %>
+  </div>
+
+  <div class="field">
+    <%= f.label :round_trip_distance_in_miles %>
+    <%= f.text_field :round_trip_distance_in_miles %>
+  </div>
+
+  <div class="field">
+    <%= f.label :no_4wd_additional_elevation_in_feet %>
+    <%= f.number_field :no_4wd_additional_elevation_in_feet %>
+  </div>
+
+  <div class="field">
+    <%= f.label :no_4wd_additional_distance_in_miles %>
+    <%= f.text_field :no_4wd_additional_distance_in_miles %>
+  </div>
+
+  <div class="field">
+    <%= f.label :route_name %>
+    <%= f.text_field :route_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :trailhead_name %>
+    <%= f.text_field :trailhead_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :trailhead_lat %>
+    <%= f.text_field :trailhead_lat %>
+  </div>
+
+  <div class="field">
+    <%= f.label :trailhead_long %>
+    <%= f.text_field :trailhead_long %>
+  </div>
+
+  <div class="field">
+    <%= f.label :four_x_four_required %>
+    <%= f.text_field :four_x_four_required %>
+  </div>
+
+  <div class="field">
+    <%= f.label :additional_info_url %>
+    <%= f.text_field :additional_info_url %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :kml %>
+    <%= f.text_field :kml %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
