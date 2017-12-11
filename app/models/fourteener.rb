@@ -1,0 +1,2 @@
+class Fourteener < ApplicationRecord
+end

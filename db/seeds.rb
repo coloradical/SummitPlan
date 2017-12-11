@@ -88,28 +88,6 @@ fourteeners_attributes=[
 		additional_info_url:"https://www.14ers.com/route.php?route=bros1&peak=Mt.+Bross"
 	},
 	{
-		name:"Cameron",
-		surname:"Mount",
-		elevation_in_feet:14286,
-		rank:?,
-		location_lat:39.351391,
-		location_long:-106.111404,
-		forest:"Pike", 
-		range:"Mosquito",
-		classification:2.3,
-		exposure:1,
-		elevation_gain_in_feet:,
-		round_trip_distance_in_miles:,
-		no_4wd_additional_elevation_in_feet: ,
-		no_4wd_additional_distance_in_miles:,
-		route_name:"",
-		trailhead_name:"",
-		trailhead_lat:,
-		trailhead_long:,
-		four_x_four_required:,
-		additional_info_url:""
-	},
-	{
 		name:"Columbia",
 		surname:"Mount",
 		elevation_in_feet:14073,
@@ -194,7 +172,7 @@ fourteeners_attributes=[
 		trailhead_name:"Needleton",
 		trailhead_lat:37.63333,
 		trailhead_long:-107.69278,
-		four_x_four_required:TRAIN,
+		four_x_four_required:0,
 		additional_info_url:"https://www.14ers.com/route.php?route=eolu3&peak=Mt.+Eolus%2C+Windom+Peak%2C+and+Sunlight+Peak"
 	},
 	{
@@ -616,28 +594,6 @@ fourteeners_attributes=[
 		additional_info_url:"https://www.14ers.com/route.php?route=cast1&peak=Castle+Peak+and+Conundrum+Peak"
 	},
 	{
-		name:"Conundrum",
-		surname:"Peak",
-		elevation_in_feet:14060,
-		rank:?,
-		location_lat:39.01563,
-		location_long:-106.86294,
-		forest:"White River",
-		range:"Elk",
-		classification:2.6,
-		exposure:3,
-		elevation_gain_in_feet:3350,
-		round_trip_distance_in_miles:8,
-		no_4wd_additional_elevation_in_feet: 1500,
-		no_4wd_additional_distance_in_miles:6.5,
-		route_name:"Castle & Conundrum Combo",
-		trailhead_name:"Castle Creek",
-		trailhead_lat:39.0289,
-		trailhead_long:-106.80801,
-		four_x_four_required:2,
-		additional_info_url:"https://www.14ers.com/route.php?route=cast4&peak=Castle+Peak+and+Conundrum+Peak"
-	},
-	{
 		name:"Crestone",
 		surname:"Peak",
 		elevation_in_feet:14294,
@@ -680,28 +636,6 @@ fourteeners_attributes=[
 		trailhead_long:-105.2925,
 		four_x_four_required:1.5,
 		additional_info_url:"https://www.14ers.com/route.php?route=cule1&peak=Culebra+Peak"
-	},
-	{
-		name:"El Diente",
-		surname:"Peak",
-		elevation_in_feet:14159,
-		rank:?,
-		location_lat:37.839275,
-		location_long:-108.005219,
-		forest:"San Juan",
-		range:"San Juan",
-		classification:3.3,
-		exposure:3,
-		elevation_gain_in_feet:3200,
-		round_trip_distance_in_miles:3,
-		no_4wd_additional_elevation_in_feet: 3300,
-		no_4wd_additional_distance_in_miles:9,
-		route_name:"North Slopes",
-		trailhead_name:"Navajo Lake",
-		trailhead_lat:37.80339,
-		trailhead_long:-108.06378,
-		four_x_four_required:0.5,
-		additional_info_url:"https://www.14ers.com/route.php?route=eldi3&peak=Mt.+Wilson%2C+Wilson+Peak%2C+and+El+Diente+Peak"
 	},
 	{
 		name:"Grays",
@@ -902,28 +836,6 @@ fourteeners_attributes=[
 		additional_info_url:"https://www.14ers.com/route.php?route=maro1&peak=The+Maroon+Bells"
 	},
 	{
-		name:"North Maroon",
-		surname:"Peak",
-		elevation_in_feet:14014,
-		rank:?,
-		location_lat:39.076077,
-		location_long:-106.987267,
-		forest:"White River",
-		range:"Elk ",
-		classification:4.3,
-		exposure:4,
-		elevation_gain_in_feet:4500,
-		round_trip_distance_in_miles:9.25,
-		no_4wd_additional_elevation_in_feet: 0,
-		no_4wd_additional_distance_in_miles:0,
-		route_name:"Northeast Ridge",
-		trailhead_name:"Maroon Lake",
-		trailhead_lat:39.09862,
-		trailhead_long:-106.94064,
-		four_x_four_required:0,
-		additional_info_url:"https://www.14ers.com/route.php?route=nmar2&peak=The+Maroon+Bells"
-	},
-	{
 		name:"Pikes",
 		surname:"Peak",
 		elevation_in_feet:14110,
@@ -1052,7 +964,7 @@ fourteeners_attributes=[
 		trailhead_name:"Needleton",
 		trailhead_lat:37.63333,
 		trailhead_long:-107.69278,
-		four_x_four_required:TRAIN,
+		four_x_four_required:0,
 		additional_info_url:"https://www.14ers.com/route.php?route=sunl2&peak=Mt.+Eolus%2C+Windom+Peak%2C+and+Sunlight+Peak"
 	},
 	{
@@ -1206,7 +1118,7 @@ fourteeners_attributes=[
 		trailhead_name:"Needleton",
 		trailhead_lat:37.63333,
 		trailhead_long:-107.69278,
-		four_x_four_required:TRAIN,
+		four_x_four_required:0,
 		additional_info_url:"https://www.14ers.com/route.php?route=wind1&peak=Mt.+Eolus%2C+Windom+Peak%2C+and+Sunlight+Peak"
 	},
 	{
@@ -1252,28 +1164,6 @@ fourteeners_attributes=[
 		trailhead_long:-105.57611,
 		four_x_four_required:3,
 		additional_info_url:"https://www.14ers.com/route.php?route=elli2&peak=Blanca%2C+Ellingwood+and+Little+Bear"
-	},
-	{
-		name:"North Eolus",
-		surname:"",
-		elevation_in_feet:14039,
-		rank:?,
-		location_lat:37.625416,
-		location_long:-107.620995,
-		forest:"San Juan",
-		range:"San Juan",
-		classification:2.6,
-		exposure:3,
-		elevation_gain_in_feet:3000,
-		round_trip_distance_in_miles:5.2,
-		no_4wd_additional_elevation_in_feet: 3200,
-		no_4wd_additional_distance_in_miles:12,
-		route_name:"South Ridge ",
-		trailhead_name:"Needleton",
-		trailhead_lat:37.63333,
-		trailhead_long:-107.69278,
-		four_x_four_required:TRAIN,
-		additional_info_url:"https://www.14ers.com/route.php?route=neol4&peak=Mt.+Eolus%2C+Windom+Peak%2C+and+Sunlight+Peak"
 	}
 ]
 
