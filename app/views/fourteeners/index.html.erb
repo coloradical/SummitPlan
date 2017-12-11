@@ -28,14 +28,17 @@
 					position: {lat: 39.582638, lng: -105.66861},
 					map: map
 				});
-				var fourteener = $('.temp_information').data('show');
+				console.log(gon.fourteeners);
+				gon.fourteeners.forEach(function(fourteener){
+					var marker = new google.maps.Marker({
+						position: {lat: fourteener.location_lat, lng: fourteener.location_long},
+						map: map
+					}); 
+				});
 			}
 		</script>
 		<script async defer
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBYkGDkbDQBSWK4WoQM-r8tA5WXkqu_Rw&callback=initMap">
-		</script>
-		<script>
-			alert(gon.fourteeners);
 		</script>
 	</body>
 </html>

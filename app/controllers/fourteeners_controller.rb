@@ -4,7 +4,7 @@ class FourteenersController < ApplicationController
   # GET /fourteeners
   # GET /fourteeners.json
   def index
-    @fourteeners = Fourteener.all
+   # @fourteeners = Fourteener.all
 	gon.fourteeners = Fourteener.all
   end
 
