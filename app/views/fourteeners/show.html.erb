@@ -41,9 +41,23 @@
         $("#sidebar").prepend("<h2>" + full_name + "</h2>");
         
     </script>
-    <h5 style="color:gray;"><%= @fourteener.elevation_in_feet; %> <small>ft</small></h5> 
-    <img src="https://raw.githubusercontent.com/elliotwhitehead/SummitPlan/0801cd532b78a99b86e1d3e1781afd08b2c03e0a/rankingStar.png" align="left">
-    <h5><%= @fourteener.rank %> </h5>
+    <h5><%= @fourteener.elevation_in_feet; %> ft. &copysr;</h5>
+    <h6> ranked:  <%= @fourteener.rank; %>/53</h6> 
+    <h6> national forest: <%= @fourteener.forest; %> </h6>
+    <h6> mountain range: <%= @fourteener.range; %> </h6>
+    <h5>---------------------------------</h5>
+    <img src="https://raw.githubusercontent.com/elliotwhitehead/SummitPlan/4afd8aa869a0a999cd0583814833745dfe30ff7a/standardRoute.png" 
+    hspace="50" width="90px" height="45px">
+    <h5> <%= @fourteener.trailhead_name; %> Trailhead </h5>
+    <h6> <%= @fourteener.trailhead_lat; %>, <%= @fourteener.trailhead_long;%></h6>
+    <h6> <%= @fourteener.route_name; %> </h6>
+    <h4> &harrw;  <%= @fourteener.round_trip_distance_in_miles; %> miles roundtrip  </h4>
+    <h4>&#10169;  <%= @fourteener.elevation_gain_in_feet; %> foot elevation gain </h4>
+    <h6> if you don't have a four wheel drive capable car </h6>
 
+
+
+
+     
     
 </div>
