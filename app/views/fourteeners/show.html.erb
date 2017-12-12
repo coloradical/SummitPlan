@@ -1,114 +1,42 @@
-<p id="notice"><%= notice %></p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <%= include_gon(:init => true) %>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Summit Plan</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 11,
+            center: {lat: 41.876, lng: -87.624}
+          });
 
-<p>
-  <strong>Name:</strong>
-  <%= @fourteener.name %>
-</p>
+          var ctaLayer = new google.maps.KmlLayer({
+            url: 'https://raw.githubusercontent.com/elliotwhitehead/SummitPlan/master/app/assets/kmls/elbe1.kml',
+            map: map
+          });
+        }
 
-<p>
-  <strong>Surname:</strong>
-  <%= @fourteener.surname %>
-</p>
-
-<p>
-  <strong>Elevation in feet:</strong>
-  <%= @fourteener.elevation_in_feet %>
-</p>
-
-<p>
-  <strong>Rank:</strong>
-  <%= @fourteener.rank %>
-</p>
-
-<p>
-  <strong>Location lat:</strong>
-  <%= @fourteener.location_lat %>
-</p>
-
-<p>
-  <strong>Location long:</strong>
-  <%= @fourteener.location_long %>
-</p>
-
-<p>
-  <strong>Forest:</strong>
-  <%= @fourteener.forest %>
-</p>
-
-<p>
-  <strong>Range:</strong>
-  <%= @fourteener.range %>
-</p>
-
-<p>
-  <strong>Classification:</strong>
-  <%= @fourteener.classification %>
-</p>
-
-<p>
-  <strong>Exposure:</strong>
-  <%= @fourteener.exposure %>
-</p>
-
-<p>
-  <strong>Elevation gain in feet:</strong>
-  <%= @fourteener.elevation_gain_in_feet %>
-</p>
-
-<p>
-  <strong>Round trip distance in miles:</strong>
-  <%= @fourteener.round_trip_distance_in_miles %>
-</p>
-
-<p>
-  <strong>No 4wd additional elevation in feet:</strong>
-  <%= @fourteener.no_4wd_additional_elevation_in_feet %>
-</p>
-
-<p>
-  <strong>No 4wd additional distance in miles:</strong>
-  <%= @fourteener.no_4wd_additional_distance_in_miles %>
-</p>
-
-<p>
-  <strong>Route name:</strong>
-  <%= @fourteener.route_name %>
-</p>
-
-<p>
-  <strong>Trailhead name:</strong>
-  <%= @fourteener.trailhead_name %>
-</p>
-
-<p>
-  <strong>Trailhead lat:</strong>
-  <%= @fourteener.trailhead_lat %>
-</p>
-
-<p>
-  <strong>Trailhead long:</strong>
-  <%= @fourteener.trailhead_long %>
-</p>
-
-<p>
-  <strong>Four x four required:</strong>
-  <%= @fourteener.four_x_four_required %>
-</p>
-
-<p>
-  <strong>Additional info url:</strong>
-  <%= @fourteener.additional_info_url %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @fourteener.description %>
-</p>
-
-<p>
-  <strong>Kml:</strong>
-  <%= @fourteener.kml %>
-</p>
-
-<%= link_to 'Edit', edit_fourteener_path(@fourteener) %> |
-<%= link_to 'Back', fourteeners_path %>
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBYkGDkbDQBSWK4WoQM-r8tA5WXkqu_Rw&callback=initMap">
+    </script>
+  </body>
+</html>
