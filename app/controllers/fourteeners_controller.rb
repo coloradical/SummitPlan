@@ -4,13 +4,14 @@ class FourteenersController < ApplicationController
   # GET /fourteeners
   # GET /fourteeners.json
   def index
-   # @fourteeners = Fourteener.all
-	gon.fourteeners = Fourteener.all
+    # @fourteeners = Fourteener.all
+    gon.fourteeners = Fourteener.all
   end
 
   # GET /fourteeners/1
   # GET /fourteeners/1.json
   def show
+    gon.fourteener = Fourteener.find(params[:id])
   end
 
   # GET /fourteeners/new
