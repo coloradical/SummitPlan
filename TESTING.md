@@ -102,6 +102,6 @@ Success! 1 test ran, 0 failed! And so goes our automated testing...
 ## User Acceptance Tests
 | UAT # |                     Action                     | Expected Outcome                                                                     | Pass | Fail |
 |-------|:----------------------------------------------:|--------------------------------------------------------------------------------------|------|------|
-| 1     | Load the webpage to see fourteeners on map     | Main page loads, Google Maps displayed, fourteeners visible on map                   |      |      |
-| 2     | Filter list of fourteeners based on difficulty | Google map shows the updated list of fourteeners that match the requested diffeculty |      |      |
-| 3     | Post a comment about a fourteener route        | Comment shows up on that fourteener's listing                                        |      |      |
+| 1     | Load the webpage to see fourteeners on map     | Main page loads, Google Maps displayed, fourteeners visible on map                   |   X   |      |
+| 2     | Filter list of fourteeners based on difficulty | Google map shows the updated list of fourteeners that match the requested diffeculty |   x   |      |
+| 3     | Post a comment about a fourteener route        | Comment shows up on that fourteener's listing                                        |   X   |      |
