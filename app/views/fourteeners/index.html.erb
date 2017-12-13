@@ -137,12 +137,13 @@
 				$( "#distance" ).val($( "#slider-distance" ).slider( "values", 0 ) + "miles - "
 					+ $( "#slider-distance" ).slider( "values", 1 ) + "miles" );
 			} );
-			$('input:checkbox').change(
-				function(){
-					if ($(this).is(':checked')) {
-						alert('checked');
-					}
-				});
+			//$('input:checkbox').change(
+			//	function(){
+			//		if ($(this).is(':checked')) {
+			//			alert('checked');
+			//		}
+			//	});
+
 		</script>
 		<script async defer
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBYkGDkbDQBSWK4WoQM-r8tA5WXkqu_Rw&callback=initMap">
@@ -156,32 +157,45 @@
 			<fieldset>
 				<legend>Difficulty: </legend>
 
-				<input type="checkbox" class="filled-in" id="class1" />
+				<input type="checkbox" class="filled-in" id="class1" onchange="myFunction('#class1')"/>
       			<label for="class1">Class 1 &nbsp </label>
 
-      			<input type="checkbox" class="filled-in" id="class2" />
+      			<input type="checkbox" class="filled-in" id="class2" onchange="myFunction('#class2')"/>
       			<label for="class2">Class 2 &nbsp </label>
 
-      			<input type="checkbox" class="filled-in" id="class3" />
+      			<input type="checkbox" class="filled-in" id="class3" onchange="myFunction('#class3')"/>
       			<label for="class3">Class 3 &nbsp </label>
 
-      			<input type="checkbox" class="filled-in" id="class4" />
+      			<input type="checkbox" class="filled-in" id="class4" onchange="myFunction('#class4')"/>
       			<label for="class4">Class 4 &nbsp </label>
+
+      			<script>
+				function myFunction(val) {
+				    alert(val + $(val)[0].checked);
+				}
+				</script>
 
 			</fieldset>
 
 			<fieldset>
 				<legend>Four-Wheel Clearance: </legend>
 
-				<input type="checkbox" class="filled-in" id="twoWheel" />
+				<input type="checkbox" class="filled-in" id="twoWheel" onchange="myFunction('#twoWheel')"/>
       			<label for="twoWheel">2 Wheel Drive &nbsp </label>
 
-      			<input type="checkbox" class="filled-in" id="fourWheel" />
+      			<input type="checkbox" class="filled-in" id="fourWheel" onchange="myFunction('#fourWheel')"/>
       			<label for="fourWheel">4x4 &nbsp </label>
 
-      			<input type="checkbox" class="filled-in" id="extreme" />
+      			<input type="checkbox" class="filled-in" id="extreme" onchange="myFunction('#extreme')"/>
       			<label for="extreme">4x4 Extreme &nbsp </label>
+
+      			<script>
+				function myFunction(val) {
+				    alert(val + $(val)[0].checked);
+				}
+				</script>
 			</fieldset>
+
 
 			<p><label for="elevation">Elevation Gain:</label><input type="text" id="elevation" readonly style="border:0; color:#f6931f; font-weight:bold;"></p>
 			<div id="slider-elevation"></div>
