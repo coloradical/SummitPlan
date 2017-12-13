@@ -15,7 +15,7 @@
 
 	<!-- Compiled and minified JavaScript -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-
+	
 
 	<title>SummitPlan</title>
 	<%= csrf_meta_tags %>
@@ -27,7 +27,7 @@
 	<div class="flex-container">
 		<header>
 			<img src="https://github.com/elliotwhitehead/SummitPlan/blob/design/resizedWhiteLogo.png?raw=true" align="left">
-
+			
 			<br>
 			<h1 style="font-size: 32px; padding-left: 30%;">The perfect tool for summiting Colorado's 14,000 foot peaks.</h1>
 			<br>
@@ -42,6 +42,8 @@
 			</svg>
 		</header>
 	</div>
+	<p class="notice"><%= notice %></p>
+	<p class="alert"><%= alert %></p>
 	<%= yield %>
 </body>
 </html>

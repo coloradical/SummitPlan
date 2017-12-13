@@ -1173,3 +1173,7 @@ fourteeners_attributes.each do |attributes|
 	fourteeners_count += 1
 end
 puts "created #{fourteeners_count} fourteeners"
+
+user = User.create! :email => 'admin@summitplan.co', :password => 'topsecret', :password_confirmation => 'topsecret', :admin => true
+user = User.create! :email => 'elliot.whitehead@colorado.edu', :password => 'topsecret', :password_confirmation => 'topsecret', :admin => false
+

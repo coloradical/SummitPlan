@@ -1,5 +1,12 @@
 class FourteenersController < ApplicationController
   before_action :set_fourteener, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_admin, only: [:new, :create, :edit, :update, :destroy]
+
+  def authenticate_admin
+    unless current_user.present? and current_user.admin?
+      redirect_to new_user_session_url, notice: "You must be an administrator to access this page."
+    end
+  end
 
   # GET /fourteeners
   # GET /fourteeners.json
