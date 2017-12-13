@@ -1,136 +1,94 @@
-// Place all the styles related to the Fourteeners controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
 header {
-<<<<<<< HEAD
-			background: #081723; 
-			line-spacing:11px; 
-			color:white; 
-			font-family:"Futura";
-			}
-		  /* Optional: Makes the sample page fill the window. */
-		  html {
-			height: 100%;
-			margin: 0;
-			padding-left: 0px;
-			font-family: "futura";
+            background: #081723; 
+            line-spacing:11px; 
+            color:white; 
+            font-family:"Futura";
+            }
+          /* Optional: Makes the sample page fill the window. */
+          html {
+            height: 100%;
+            margin: 0;
+            padding-left: 0px;
+            font-family: "futura";
 
-		  }
+          }
 
-		  body{
-		  	background: linear-gradient(to bottom, #081723 71%, #ffffff 133%); 
-			font-family:"Futura"; 
-			color: black;
-		  	height: 100%;
-		  	width: 1500px;
-		  }
+          body{
+              background: linear-gradient(to bottom, #081723 71%, #ffffff 133%); 
+            font-family:"Futura"; 
+            color: black;
+              height: 100%;
+              width: 1500px;
+          }
+          a, a:visited{
+          	color: white !important;
+          }
 
-		  #sidebar {
-			background: black;
-			width: 400px;
-			display: block;
-			position: absolute;
-			height: 620px;
-			top: 250px;	
-			color:white;
-			padding-left: 10px;
-			font-family: "Futura";
-		
-		}
+          form.new_user{
+          	max-width: 500px;
+          	input{
+          		color: white;
+          	}
+          	.actions{
+          		input{
+          			color:black;
+          		}
+          	}
+          }
 
-		.rankingStar {
-			position: relative;
-			left: 0px;
-			top:0;
+          #sidebar {
+            background: black;
+            width: 400px;
+            display: block;
+            position: absolute;
+            height: 620px;
+            top: 250px;    
+            color:white;
+            padding-left: 10px;
+            font-family: "Futura";
+        
+        }
 
-
-		}
-
-		h6 {
-			color:gray;
-			padding-left: 5px;
-			font-style: italic;
-		}
-
-		h5 {
-			padding-left: 5px;
-		}
-
-		h4 {
-			font-size: 20px;
-		}
+        .rankingStar {
+            position: relative;
+            left: 0px;
+            top:0;
 
 
-	
-		#firstHeading, #bodyContent {
-			
-			font-family: "Futura";
-			color: black;
-			text-align: center;
-=======
-	background: #081723; 
-	line-spacing:11px; 
-	color:white; 
-	font-family:"Futura";
-}
+        }
 
-html {
-	height: 100%;
-	margin: 0;
-	padding-left: 0px;
-	font-family: "futura";
-}
+        h6 {
+            color:gray;
+            padding-left: 5px;
+            font-style: italic;
+        }
 
-body{
-	background: linear-gradient(to bottom, #081723 71%, #ffffff 133%); 
-	font-family:"Futura"; 
-	color: white;
-	height: 100%;
-	width: 1500px;
-}
+        h5 {
+            padding-left: 5px;
+        }
 
-a, a:visited{
-		color: white !important;
-	}
-
-form.new_user{
-	max-width: 500px;
-	input{
-		color: white;
-	}
-	.actions{
-		input{
-			color:black;
->>>>>>> master
-		}
-	}
-}
-
-#sidebar {
-	background: black;
-	width: 400px;
-	display: block;
-	position: absolute;
-	height: 600px;
-	top: 250px;	
-	color:white;
-	padding-left: 10px;
-	font-family: "Futura";
-
-}
-
-#firstHeading, #bodyContent {
-
-	font-family: "Futura";
-	color: black;
-	text-align: center;
-}
-
-#map {
-	height: 70%;
-}
+        h4 {
+            font-size: 20px;
+        }
 
 
-.gm-style-iw h1 {
-	text-align: center;
-}
+    
+        #firstHeading, #bodyContent {
+            
+            font-family: "Futura";
+            color: black;
+            text-align: center;
+        }
+
+        #map {
+            height: 70%;
+            width: 80%;
+            padding-left: 1500px;
+          }
+
+
+
+
+
+
+
