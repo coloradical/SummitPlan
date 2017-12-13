@@ -1007,7 +1007,7 @@ fourteeners_attributes=[
 	trailhead_name:"Silver Creek/Grizzly Gulch ",
 	trailhead_lat:37.93694,
 	trailhead_long:-107.46083,
-	four_x_four_required:1.51,
+	four_x_four_required:1.5,
 	additional_info_url:"https://www.14ers.com/route.php?route=redc1&peak=Redcloud+Peak+and+Sunshine+Peak",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/redc1.kml
 "},
