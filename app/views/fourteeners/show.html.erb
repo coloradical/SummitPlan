@@ -21,7 +21,7 @@
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBYkGDkbDQBSWK4WoQM-r8tA5WXkqu_Rw&callback=initMap">
   </script>
 
-  <div id="sidebar">
+  <div id="sidebar" style="height:auto;">
     <script type="text/javascript">
         if (gon.fourteener.surname == "Mount") {
           var full_name = gon.fourteener.surname +" " +gon.fourteener.name;
@@ -42,8 +42,95 @@
         
     </script>
     <h5 style="color:gray;"><%= @fourteener.elevation_in_feet; %> <small>ft</small></h5> 
-    <img src="https://raw.githubusercontent.com/elliotwhitehead/SummitPlan/0801cd532b78a99b86e1d3e1781afd08b2c03e0a/rankingStar.png" align="left">
-    <h5><%= @fourteener.rank %> </h5>
+    <p>
+  <strong>Name:</strong>
+  <%= @fourteener.name %>
+</p>
+
+<p>
+  <strong>Surname:</strong>
+  <%= @fourteener.surname %>
+</p>
+
+<p>
+  <strong>Elevation in feet:</strong>
+  <%= @fourteener.elevation_in_feet %>
+</p>
+
+<p>
+  <strong>Rank:</strong>
+  <%= @fourteener.rank %>
+</p>
+
+<p>
+  <strong>Location lat:</strong>
+  <%= @fourteener.location_lat %>
+</p>
+
+<p>
+  <strong>Location long:</strong>
+  <%= @fourteener.location_long %>
+</p>
+
+<p>
+  <strong>Forest:</strong>
+  <%= @fourteener.forest %>
+</p>
+
+<p>
+  <strong>Range:</strong>
+  <%= @fourteener.range %>
+</p>
+
+<p>
+  <strong>Classification:</strong>
+  <%= @fourteener.classification %>
+</p>
+
+<p>
+  <strong>Exposure:</strong>
+  <%= @fourteener.exposure %>
+</p>
+
+<p>
+  <strong>Elevation gain in feet:</strong>
+  <%= @fourteener.elevation_gain_in_feet %>
+</p>
+
+<p>
+  <strong>Round trip distance in miles:</strong>
+  <%= @fourteener.round_trip_distance_in_miles %>
+</p>
+
+<p>
+  <strong>Route name:</strong>
+  <%= @fourteener.route_name %>
+</p>
+
+<p>
+  <strong>Trailhead name:</strong>
+  <%= @fourteener.trailhead_name %>
+</p>
+
+<p>
+  <strong>Trailhead lat:</strong>
+  <%= @fourteener.trailhead_lat %>
+</p>
+
+<p>
+  <strong>Trailhead long:</strong>
+  <%= @fourteener.trailhead_long %>
+</p>
+
+<p>
+  <strong>Four x four required:</strong>
+  <%= @fourteener.four_x_four_required %>
+</p>
+
+<p>
+  <strong>Additional info url:</strong>
+  <%= @fourteener.additional_info_url %>
+</p>
 
     
 </div>
