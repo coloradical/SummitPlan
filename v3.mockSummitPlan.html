@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<style> 
+.flex-container {
+    display: -webkit-flex;
+    display: flex;  
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    text-align: center;
+	line-spacing: 15px;
+}
+
+flex-rectangle {
+	width: 100%;
+	background: black;
+	padding-top:10px;
+}
+
+.flex-container > * {
+    padding: 15px;
+    padding-bottom: 10px;
+    -webkit-flex: 1 100%;
+    flex: 1 100%;
+}
+
+.article {
+    text-align: left;
+}
+
+body {
+	margin: 0px;
+	padding:0px;
+	min-width: 1400px;
+
+
+}
+
+#sidebar {
+	background: black;
+	width: 350px;
+	display: block;
+	position: absolute;
+	left: 15px;
+	height: 600px;
+	top: 42%;
+	
+}
+
+header {
+	background: #081723; 
+	line-spacing:11px; 
+	color:white; 
+	font-family:"Futura";
+}
+
+body {
+	background: linear-gradient(to bottom, #081723 71%, #ffffff 133%); 
+	font-family:"Futura"; 
+	color: white;
+}
+div { 
+	background: linear-gradient(to 10%, #081723 71%, #ffffff 133%);
+
+ }
+
+.iframe {
+	padding-left: 30%;
+}
+
+@media all and (min-width: 50px) {
+    .nav {text-align:left;-webkit-flex: 1 auto;flex:1 auto;-webkit-order:1;order:1;}
+    .article {-webkit-flex:5 0px;flex:5 0px;-webkit-order:2;order:2;}
+    footer {-webkit-order:3;order:3;}
+}
+</style>
+
+
+
+<div class="flex-container">
+<header>
+	<img src="resizedWhiteLogo.png" align="left">
+	<br>
+	<br>
+	<br>
+	<br>
+	<h1 style="font-size: 160%;">All the information you need to summit Colorado's 14,000 foot peaks.</h1>
+	<br>
+	<br>
+	<svg width="100%" height="100">
+  		<rect width="100%" height="1000" style="fill:black" />
+		  <text x="5%" y="60" font-family="Futura" font-size="25" fill="white">Fourteener Search</text>
+		  <text x="30%" y="60" font-family="Futura" font-size="25" fill="white">&#9830</text>
+		  <text x="40%" y="60" font-family="Futura" font-size="25" fill="white">Fourteener Profiles</text>
+		  <text x="65%" y="60" font-family="Futura" font-size="25" fill="white">&#9830</text>
+		  <text x="75%" y="60" font-family="Futura" font-size="25" fill="white">About the Makers</text>
+	</svg>
+</header>
+
+
+<body>
+	<h4 style="padding-left: 30%;"> Click on a marker to view basic 14er stats, or enter criteria on the left to narrow down your search for the perfect hike!<h4>
+
+	<div id="sidebar">
+			<h6><i> Use sliders and check boxes to find the right peak for you.</i></h6>
+
+				
+
+			</iframe>
+
+	</div>
+	<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1EL-XW_YQro9tZ41-TNe1ryNyhcFdxMBA&z=13" padding-left="200%" width="940" height="480" zoom="10">
+
+</body>
+
+
+
+
+
+
+
+
+<article class="article">
+	<h6> something something something  </h6>
+</article>
+
+</div>
+
+

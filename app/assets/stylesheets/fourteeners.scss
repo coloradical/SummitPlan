@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 header {
+<<<<<<< HEAD
 			background: #081723; 
 			line-spacing:11px; 
 			color:white; 
@@ -66,10 +67,70 @@ header {
 			font-family: "Futura";
 			color: black;
 			text-align: center;
-		}
+=======
+	background: #081723; 
+	line-spacing:11px; 
+	color:white; 
+	font-family:"Futura";
+}
 
-		#map {
-			height: 70%;
-			width: 80%;
-			padding-left: 1500px;
-		  }
+html {
+	height: 100%;
+	margin: 0;
+	padding-left: 0px;
+	font-family: "futura";
+}
+
+body{
+	background: linear-gradient(to bottom, #081723 71%, #ffffff 133%); 
+	font-family:"Futura"; 
+	color: white;
+	height: 100%;
+	width: 1500px;
+}
+
+a, a:visited{
+		color: white !important;
+	}
+
+form.new_user{
+	max-width: 500px;
+	input{
+		color: white;
+	}
+	.actions{
+		input{
+			color:black;
+>>>>>>> master
+		}
+	}
+}
+
+#sidebar {
+	background: black;
+	width: 400px;
+	display: block;
+	position: absolute;
+	height: 600px;
+	top: 250px;	
+	color:white;
+	padding-left: 10px;
+	font-family: "Futura";
+
+}
+
+#firstHeading, #bodyContent {
+
+	font-family: "Futura";
+	color: black;
+	text-align: center;
+}
+
+#map {
+	height: 70%;
+}
+
+
+.gm-style-iw h1 {
+	text-align: center;
+}
