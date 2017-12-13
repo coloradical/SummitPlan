@@ -19,11 +19,11 @@ Summit Plan is a website that allows you to enter criteria to find the perfect 1
 * Overall interactive map showing where all the 14ers are
 
 ## File Structure
-Two files hold the main source code for this project (with numerous other files used for the framework).
+Most of our app was setup and organized using the Ruby on Rails convention. Two files hold the main source code for this project:
 
-Main Homepage: index.html.erb is located at app/views/fourteeners/index.html.erb
+Main Homepage: app/views/fourteeners/index.html.erb
 
-Fourteener Specific Page: shows.html.erb is located at app/views/fourteeners/shows.html.erb
+Fourteener Specific Page: app/views/fourteeners/shows.html.erb
 
 ## Installation
 You can easily install and set up this project thanks to containerization from [Docker](https://docker.com)!
