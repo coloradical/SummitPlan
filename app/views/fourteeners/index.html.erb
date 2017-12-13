@@ -137,6 +137,12 @@
 				$( "#distance" ).val($( "#slider-distance" ).slider( "values", 0 ) + "miles - "
 					+ $( "#slider-distance" ).slider( "values", 1 ) + "miles" );
 			} );
+			$('input:checkbox').change(
+				function(){
+					if ($(this).is(':checked')) {
+						alert('checked');
+					}
+				});
 		</script>
 		<script async defer
 		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBYkGDkbDQBSWK4WoQM-r8tA5WXkqu_Rw&callback=initMap">
