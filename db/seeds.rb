@@ -17,7 +17,7 @@ fourteeners_attributes=[
 	trailhead_name:"Mt Elbert ",
 	trailhead_lat:39.15216,
 	trailhead_long:-106.41235,
-	four_x_four_required:0,
+	four_x_four_required:1,
 	additional_info_url:"https://www.14ers.com/route.php?route=elbe1&peak=Mt.+Elbert",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/elbe1.kml
 "},
@@ -39,7 +39,7 @@ fourteeners_attributes=[
 	trailhead_name:"Mt Massive ",
 	trailhead_lat:39.15177,
 	trailhead_long:-106.41918,
-	four_x_four_required:0,
+	four_x_four_required:1,
 	additional_info_url:"https://www.14ers.com/route.php?route=mass1&peak=Mt.+Massive",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/mass1.kml
 "},
@@ -83,7 +83,7 @@ fourteeners_attributes=[
 	trailhead_name:"Lake Como",
 	trailhead_lat:37.53861,
 	trailhead_long:-105.57611,
-	four_x_four_required:3,
+	four_x_four_required:4,
 	additional_info_url:"https://www.14ers.com/route.php?route=blan1&peak=Blanca%2C+Ellingwood+and+Little+Bear",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/blan1.kml
 "},
@@ -105,7 +105,7 @@ fourteeners_attributes=[
 	trailhead_name:"La Plata Peak",
 	trailhead_lat:39.06788,
 	trailhead_long:-106.50515,
-	four_x_four_required:0,
+	four_x_four_required:1,
 	additional_info_url:"https://www.14ers.com/route.php?route=lapl1&peak=La+Plata+Peak",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/lapl1.kml
 "},
@@ -127,7 +127,7 @@ fourteeners_attributes=[
 	trailhead_name:"Nellie Creek ",
 	trailhead_lat:38.006209,
 	trailhead_long:-107.42158,
-	four_x_four_required:2,
+	four_x_four_required:3,
 	additional_info_url:"https://www.14ers.com/route.php?route=unco1&peak=Uncompahgre+Peak",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/unco1.kml
 "},
@@ -149,7 +149,7 @@ fourteeners_attributes=[
 	trailhead_name:"South Colony Lakes",
 	trailhead_lat:37.97611,
 	trailhead_long:-105.50651,
-	four_x_four_required:1.5,
+	four_x_four_required:2,
 	additional_info_url:"https://www.14ers.com/route.php?route=cpea2&peak=Crestone+Peak+and+Crestone+Needle",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/cpea2.kml
 "},
@@ -193,7 +193,7 @@ fourteeners_attributes=[
 	trailhead_name:"Grays Peak",
 	trailhead_lat:39.66087,
 	trailhead_long:-105.78462,
-	four_x_four_required:1.5,
+	four_x_four_required:2,
 	additional_info_url:"https://www.14ers.com/route.php?route=gray1&peak=Grays+Peak+and+Torreys+Peak",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/gray1.kml
 "},
@@ -215,7 +215,7 @@ fourteeners_attributes=[
 	trailhead_name:"Baldwin Gulch",
 	trailhead_lat:38.71002,
 	trailhead_long:-106.29163,
-	four_x_four_required:2,
+	four_x_four_required:3,
 	additional_info_url:"https://www.14ers.com/route.php?route=ante1&peak=Mt.+Antero",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/ante1.kml
 "},
@@ -237,7 +237,7 @@ fourteeners_attributes=[
 	trailhead_name:"Grays Peak",
 	trailhead_lat:39.66087,
 	trailhead_long:-105.78462,
-	four_x_four_required:1.5,
+	four_x_four_required:2,
 	additional_info_url:"https://www.14ers.com/route.php?route=torr2&peak=Grays+Peak+and+Torreys+Peak",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/torr2.kml
 "},
@@ -259,7 +259,7 @@ fourteeners_attributes=[
 	trailhead_name:"Castle Creek",
 	trailhead_lat:39.0289,
 	trailhead_long:-106.80801,
-	four_x_four_required:2,
+	four_x_four_required:3,
 	additional_info_url:"https://www.14ers.com/route.php?route=cast1&peak=Castle+Peak+and+Conundrum+Peak",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/cast1.kml
 "},
@@ -281,7 +281,7 @@ fourteeners_attributes=[
 	trailhead_name:"Quandary",
 	trailhead_lat:39.3849,
 	trailhead_long:-106.06178,
-	four_x_four_required:0.5,
+	four_x_four_required:1,
 	additional_info_url:"https://www.14ers.com/route.php?route=quan1&peak=Quandary+Peak",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/quan1.kml
 "},
@@ -303,7 +303,7 @@ fourteeners_attributes=[
 	trailhead_name:"Evans/Summit Lake",
 	trailhead_lat:39.59882,
 	trailhead_long:-105.64039,
-	four_x_four_required:0,
+	four_x_four_required:1,
 	additional_info_url:"https://www.14ers.com/route.php?route=evan2&peak=Mt.+Evans",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/evan1.kml
 "},
@@ -325,7 +325,7 @@ fourteeners_attributes=[
 	trailhead_name:"Longs Peak",
 	trailhead_lat:40.27223,
 	trailhead_long:-105.55679,
-	four_x_four_required:0,
+	four_x_four_required:1,
 	additional_info_url:"https://www.14ers.com/route.php?route=long1&peak=Longs+Peak",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/long1.kml
 "},
@@ -347,7 +347,7 @@ fourteeners_attributes=[
 	trailhead_name:"Navajo Lake",
 	trailhead_lat:37.80339,
 	trailhead_long:-108.06378,
-	four_x_four_required:0.5,
+	four_x_four_required:1,
 	additional_info_url:"https://www.14ers.com/php14ers/trailheadsview.php?thparm=sj03",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/wils1.kml
 "},
@@ -391,7 +391,7 @@ fourteeners_attributes=[
 	trailhead_name:"Missouri Gulch",
 	trailhead_lat:38.99807,
 	trailhead_long:-106.37508,
-	four_x_four_required:0.5,
+	four_x_four_required:1,
 	additional_info_url:"https://www.14ers.com/route.php?route=belf1&peak=Mt.+Belford+and+Mt.+Oxford",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/belf1.kml
 "},
@@ -413,7 +413,7 @@ fourteeners_attributes=[
 	trailhead_name:"South Colony Lakes",
 	trailhead_lat:37.97611,
 	trailhead_long:-105.50651,
-	four_x_four_required:1.5,
+	four_x_four_required:2,
 	additional_info_url:"https://www.14ers.com/route.php?route=cnee1&peak=Crestone+Peak+and+Crestone+Needle",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/cnee1.kml
 "},
@@ -435,7 +435,7 @@ fourteeners_attributes=[
 	trailhead_name:"Mt Princeton Road",
 	trailhead_lat:38.73994,
 	trailhead_long:-106.17558,
-	four_x_four_required:1.5,
+	four_x_four_required:2,
 	additional_info_url:"https://www.14ers.com/route.php?route=prin1&peak=Mt.+Princeton",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/prin1.kml
 "},
@@ -457,7 +457,7 @@ fourteeners_attributes=[
 	trailhead_name:"Denny Creek",
 	trailhead_lat:38.815,
 	trailhead_long:-106.33444,
-	four_x_four_required:0,
+	four_x_four_required:1,
 	additional_info_url:"https://www.14ers.com/route.php?route=yale1&peak=Mt.+Yale",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/yale1.kml
 "},
@@ -523,7 +523,7 @@ fourteeners_attributes=[
 	trailhead_name:"Maroon Lake",
 	trailhead_lat:39.09862,
 	trailhead_long:-106.94064,
-	four_x_four_required:0,
+	four_x_four_required:1,
 	additional_info_url:"https://www.14ers.com/route.php?route=maro1&peak=The+Maroon+Bells",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/maro1.kml
 "},
@@ -545,7 +545,7 @@ fourteeners_attributes=[
 	trailhead_name:"Shavano/Tabeguache",
 	trailhead_lat:38.59863,
 	trailhead_long:-106.19722,
-	four_x_four_required:1.5,
+	four_x_four_required:2,
 	additional_info_url:"https://www.14ers.com/route.php?route=tabe3w&peak=Mt.+Shavano+and+Tabeguache+Peak",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/tabe2.kml
 "},
@@ -567,7 +567,7 @@ fourteeners_attributes=[
 	trailhead_name:"Missouri Gulch",
 	trailhead_lat:38.99807,
 	trailhead_long:-106.37508,
-	four_x_four_required:0.5,
+	four_x_four_required:1,
 	additional_info_url:"https://www.14ers.com/route.php?route=oxfo2&peak=Mt.+Belford+and+Mt.+Oxford",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/oxfo2.kml
 "},
@@ -589,7 +589,7 @@ fourteeners_attributes=[
 	trailhead_name:"Yankee Boy Basin",
 	trailhead_lat:37.995,
 	trailhead_long:-107.78472,
-	four_x_four_required:1.5,
+	four_x_four_required:2,
 	additional_info_url:"https://www.14ers.com/route.php?route=snef1&peak=Mt.+Sneffels",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/snef1.kml
 "},
@@ -633,7 +633,7 @@ fourteeners_attributes=[
 	trailhead_name:"Capitol Creek",
 	trailhead_lat:39.23422,
 	trailhead_long:-107.07952,
-	four_x_four_required:1.5,
+	four_x_four_required:2,
 	additional_info_url:"https://www.14ers.com/route.php?route=capi1&peak=Capitol+Peak",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/capi1.kml
 "},
@@ -655,7 +655,7 @@ fourteeners_attributes=[
 	trailhead_name:"Barr Trail",
 	trailhead_lat:38.854767,
 	trailhead_long:-104.949492,
-	four_x_four_required:0,
+	four_x_four_required:1,
 	additional_info_url:"https://www.14ers.com/routelist.php?peak=Pikes+Peak",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/pike1.kml
 "},
@@ -677,7 +677,7 @@ fourteeners_attributes=[
 	trailhead_name:"Snowmass Creek",
 	trailhead_lat:39.20016,
 	trailhead_long:-106.99414,
-	four_x_four_required:0.5,
+	four_x_four_required:1,
 	additional_info_url:"https://www.14ers.com/route.php?route=snow1&peak=Snowmass+Mountain",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/snow1.kml
 "},
@@ -699,7 +699,7 @@ fourteeners_attributes=[
 	trailhead_name:"Needleton",
 	trailhead_lat:37.63333,
 	trailhead_long:-107.69278,
-	four_x_four_required:0,
+	four_x_four_required:1,
 	additional_info_url:"https://www.14ers.com/route.php?route=eolu3&peak=Mt.+Eolus%2C+Windom+Peak%2C+and+Sunlight+Peak",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/eolu3.kml
 "},
@@ -721,7 +721,7 @@ fourteeners_attributes=[
 	trailhead_name:"Needleton",
 	trailhead_lat:37.63333,
 	trailhead_long:-107.69278,
-	four_x_four_required:0,
+	four_x_four_required:1,
 	additional_info_url:"https://www.14ers.com/route.php?route=wind1&peak=Mt.+Eolus%2C+Windom+Peak%2C+and+Sunlight+Peak",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/wind1.kml
 "},
@@ -787,7 +787,7 @@ fourteeners_attributes=[
 	trailhead_name:"Missouri Gulch",
 	trailhead_lat:38.99807,
 	trailhead_long:-106.37508,
-	four_x_four_required:0.5,
+	four_x_four_required:1,
 	additional_info_url:"https://www.14ers.com/route.php?route=miss1&peak=Missouri+Mountain",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/miss1.kml
 "},
@@ -809,7 +809,7 @@ fourteeners_attributes=[
 	trailhead_name:"South Colony Lakes",
 	trailhead_lat:37.97611,
 	trailhead_long:-105.50651,
-	four_x_four_required:1.5,
+	four_x_four_required:2,
 	additional_info_url:"https://www.14ers.com/route.php?route=humb1&peak=Humboldt+Peak",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/humb1.kml
 "},
@@ -831,7 +831,7 @@ fourteeners_attributes=[
 	trailhead_name:"Guanella Pass",
 	trailhead_lat:39.59688,
 	trailhead_long:-105.71003,
-	four_x_four_required:0,
+	four_x_four_required:1,
 	additional_info_url:"https://www.14ers.com/route.php?route=bier1&peak=Mt.+Bierstadt",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/bier1.kml
 "},
@@ -853,7 +853,7 @@ fourteeners_attributes=[
 	trailhead_name:"Needleton",
 	trailhead_lat:37.63333,
 	trailhead_long:-107.69278,
-	four_x_four_required:0,
+	four_x_four_required:1,
 	additional_info_url:"https://www.14ers.com/route.php?route=sunl2&peak=Mt.+Eolus%2C+Windom+Peak%2C+and+Sunlight+Peak",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/sunl2.kml
 "},
@@ -875,7 +875,7 @@ fourteeners_attributes=[
 	trailhead_name:"American Basin",
 	trailhead_lat:37.92028,
 	trailhead_long:-107.51639,
-	four_x_four_required:1.5,
+	four_x_four_required:2,
 	additional_info_url:"https://www.14ers.com/route.php?route=hand1&peak=Handies+Peak",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/hand1.kml
 "},
@@ -897,7 +897,7 @@ fourteeners_attributes=[
 	trailhead_name:"Culebra",
 	trailhead_lat:37.15,
 	trailhead_long:-105.2925,
-	four_x_four_required:1.5,
+	four_x_four_required:2,
 	additional_info_url:"https://www.14ers.com/route.php?route=cule1&peak=Culebra+Peak",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/cule1.kml
 "},
@@ -919,7 +919,7 @@ fourteeners_attributes=[
 	trailhead_name:"Lake Como ",
 	trailhead_lat:37.53861,
 	trailhead_long:-105.57611,
-	four_x_four_required:3,
+	four_x_four_required:4,
 	additional_info_url:"https://www.14ers.com/route.php?route=elli2&peak=Blanca%2C+Ellingwood+and+Little+Bear",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/elli2.kml
 "},
@@ -941,11 +941,11 @@ fourteeners_attributes=[
 	trailhead_name:"Huerfano/Lily Lake",
 	trailhead_lat:37.62361,
 	trailhead_long:-105.47278,
-	four_x_four_required:1.5,
+	four_x_four_required:2,
 	additional_info_url:"https://www.14ers.com/route.php?route=lind1&peak=Mt.+Lindsey",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/lind1.kml
 "},
-	{name:"Little Bear ",
+	{name:"Little Bear",
 	surname:"Peak",
 	elevation_in_feet:14037,
 	rank:44,
@@ -963,7 +963,7 @@ fourteeners_attributes=[
 	trailhead_name:"Lake Como ",
 	trailhead_lat:37.53861,
 	trailhead_long:-105.57611,
-	four_x_four_required:3,
+	four_x_four_required:4,
 	additional_info_url:"https://www.14ers.com/route.php?route=litt6&peak=Blanca%2C+Ellingwood+and+Little+Bear",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/litt6.kml
 "},
@@ -1007,7 +1007,7 @@ fourteeners_attributes=[
 	trailhead_name:"Silver Creek/Grizzly Gulch ",
 	trailhead_lat:37.93694,
 	trailhead_long:-107.46083,
-	four_x_four_required:1.5,
+	four_x_four_required:2,
 	additional_info_url:"https://www.14ers.com/route.php?route=redc1&peak=Redcloud+Peak+and+Sunshine+Peak",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/redc1.kml
 "},
@@ -1029,7 +1029,7 @@ fourteeners_attributes=[
 	trailhead_name:"Maroon Lake",
 	trailhead_lat:39.09862,
 	trailhead_long:-106.94064,
-	four_x_four_required:0,
+	four_x_four_required:1,
 	additional_info_url:"https://www.14ers.com/route.php?route=pyra1&peak=Pyramid+Peak",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/pyra1.kml
 "},
@@ -1051,7 +1051,7 @@ fourteeners_attributes=[
 	trailhead_name:"Rock of Ages ",
 	trailhead_lat:37.88296,
 	trailhead_long:-108.01848,
-	four_x_four_required:1.5,
+	four_x_four_required:2,
 	additional_info_url:"https://www.14ers.com/route.php?route=wils1&peak=Mt.+Wilson%2C+Wilson+Peak%2C+and+El+Diente+Peak",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/mwil2.kml
 "},
@@ -1073,7 +1073,7 @@ fourteeners_attributes=[
 	trailhead_name:"Matterhorn Creek",
 	trailhead_lat:38.02962,
 	trailhead_long:-107.49102,
-	four_x_four_required:2,
+	four_x_four_required:3,
 	additional_info_url:"https://www.14ers.com/route.php?route=wett1&peak=Wetterhorn+Peak",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/wett1.kml
 "},
@@ -1117,7 +1117,7 @@ fourteeners_attributes=[
 	trailhead_name:"Half Moon (Tigiwon) ",
 	trailhead_lat:39.50054,
 	trailhead_long:-106.43318,
-	four_x_four_required:0.5,
+	four_x_four_required:1,
 	additional_info_url:"https://www.14ers.com/route.php?route=holy1&peak=Mt.+of+the+Holy+Cross",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/holy1.kml
 "},
@@ -1139,7 +1139,7 @@ fourteeners_attributes=[
 	trailhead_name:"Clear Creek/South Winfield",
 	trailhead_lat:38.96039,
 	trailhead_long:-106.46091,
-	four_x_four_required:1.5,
+	four_x_four_required:2,
 	additional_info_url:"https://www.14ers.com/route.php?route=huro1&peak=Huron+Peak",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/huro1.kml
 "},
@@ -1161,7 +1161,7 @@ fourteeners_attributes=[
 	trailhead_name:"Silver Creek/Grizzly Gulch ",
 	trailhead_lat:37.93694,
 	trailhead_long:-107.46083,
-	four_x_four_required:1.5,
+	four_x_four_required:2,
 	additional_info_url:"https://www.14ers.com/route.php?route=suns2&peak=Redcloud+Peak+and+Sunshine+Peak",
 	kml: "https://github.com/elliotwhitehead/SummitPlan/raw/homepage/app/assets/kmls/suns2.kml
 "}
