@@ -22,6 +22,7 @@ Summit Plan is a website that allows you to enter criteria to find the perfect 1
 Two files hold the main source code for this project (with numerous other files used for the framework).
 
 Main Homepage: index.html.erb is located at app/views/fourteeners/index.html.erb
+
 Fourteener Specific Page: shows.html.erb is located at app/views/fourteeners/shows.html.erb
 
 ## Installation
