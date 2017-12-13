@@ -13,15 +13,30 @@ html {
 	margin: 0;
 	padding-left: 0px;
 	font-family: "futura";
-
 }
 
 body{
 	background: linear-gradient(to bottom, #081723 71%, #ffffff 133%); 
 	font-family:"Futura"; 
-	color: black;
+	color: white;
 	height: 100%;
 	width: 1500px;
+}
+
+a, a:visited{
+		color: white !important;
+	}
+
+form.new_user{
+	max-width: 500px;
+	input{
+		color: white;
+	}
+	.actions{
+		input{
+			color:black;
+		}
+	}
 }
 
 #sidebar {
@@ -50,6 +65,5 @@ body{
 
 
 .gm-style-iw h1 {
-	width: 80%;
-	padding-left: 1500px;
+	text-align: center;
 }
