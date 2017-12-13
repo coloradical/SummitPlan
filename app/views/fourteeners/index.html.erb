@@ -40,16 +40,16 @@
 				<label for="4x4">4x4 &nbsp </label>
 			</fieldset> -->
 
+			<div style="max-width: 300px; padding-left:15px;">
+				<p><label for="vehicle">Trailhead Accessibility</label><input type="text" id="vehicle" readonly style="border:0; color:#f6931f; font-weight:bold;"></p>
+				<div id="slider-vehicle"></div>
 
-			<p><label for="vehicle">Trailhead Accessibility</label><input type="text" id="vehicle" readonly style="border:0; color:#f6931f; font-weight:bold;"></p>
-			<div id="slider-vehicle"></div>
+				<p><label for="elevation">Elevation Gain:</label><input type="text" id="elevation" readonly style="border:0; color:#f6931f; font-weight:bold;"></p>
+				<div id="slider-elevation"></div>
 
-			<p><label for="elevation">Elevation Gain:</label><input type="text" id="elevation" readonly style="border:0; color:#f6931f; font-weight:bold;"></p>
-			<div id="slider-elevation"></div>
-
-			<p><label for="distance">Round Trip Distance:</label><input type="text" id="distance" readonly style="border:0; color:#f6931f; font-weight:bold;"></p>
-			<div id="slider-distance"></div>
-
+				<p><label for="distance">Round Trip Distance:</label><input type="text" id="distance" readonly style="border:0; color:#f6931f; font-weight:bold;"></p>
+				<div id="slider-distance"></div>
+			</div>
 		</div>
 
 <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBYkGDkbDQBSWK4WoQM-r8tA5WXkqu_Rw&callback=initMap"></script>
@@ -366,8 +366,8 @@
 				});
 			}
 		});
-		$("#distance").val($("#slider-distance").slider("values", 0) + "miles - "
-			+ $("#slider-distance").slider("values", 1) + "miles");
+		$("#distance").val($("#slider-distance").slider("values", 0) + " miles - "
+			+ $("#slider-distance").slider("values", 1) + " miles");
 	});
 
 
