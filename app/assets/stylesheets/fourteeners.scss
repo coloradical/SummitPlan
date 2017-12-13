@@ -1,22 +1,57 @@
 // Place all the styles related to the Fourteeners controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+header {
+			background: #081723; 
+			line-spacing:11px; 
+			color:white; 
+			font-family:"Futura";
+			}
+		  /* Optional: Makes the sample page fill the window. */
+		  html {
+			height: 100%;
+			margin: 0;
+			padding-left: 0px;
+			font-family: "futura";
 
+		  }
 
+		  body{
+		  	background: linear-gradient(to bottom, #081723 71%, #ffffff 133%); 
+			font-family:"Futura"; 
+			color: black;
+		  	height: 100%;
+		  	width: 1500px;
+		  }
 
+		  #sidebar {
+			background: black;
+			width: 400px;
+			display: block;
+			position: absolute;
+			height: 600px;
+			top: 250px;	
+			color:white;
+			padding-left: 10px;
+			font-family: "Futura";
+		
+		}
 
-.gm-style-iw{
-	
-	font-family: "Futura";
+		#firstHeading, #bodyContent {
+			
+			font-family: "Futura";
+			color: black;
+			text-align: center;
+		}
 
 }
 
-.gm-style-iw p {
+		#map {
 
-	font-family: "Futura";
+			height: 70%;
 }
 
 .gm-style-iw h1 {
-	text-align: center;
-	font-size: 32px;
-}
+			width: 80%;
+			padding-left: 1500px;
+		  }
