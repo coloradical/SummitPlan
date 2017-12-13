@@ -4,7 +4,7 @@ class FourteenersController < ApplicationController
 
   def authenticate_admin
     unless current_user.present? and current_user.admin?
-      redirect_to new_user_session_url, notice: "Hey now."
+      redirect_to new_user_session_url, notice: "You must be an administrator to access this page."
     end
   end
 
