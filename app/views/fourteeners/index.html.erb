@@ -137,17 +137,10 @@
 				$( "#distance" ).val($( "#slider-distance" ).slider( "values", 0 ) + "miles - "
 					+ $( "#slider-distance" ).slider( "values", 1 ) + "miles" );
 			} );
-			//$('input:checkbox').change(
-			//	function(){
-			//		if ($(this).is(':checked')) {
-			//			alert('checked');
-			//		}
-			//	});
+
 
 		</script>
-		<script async defer
-		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBYkGDkbDQBSWK4WoQM-r8tA5WXkqu_Rw&callback=initMap">
-		</script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBYkGDkbDQBSWK4WoQM-r8tA5WXkqu_Rw&callback=initMap"></script>
 
 		<div id="sidebar">
 
@@ -158,27 +151,16 @@
 				<legend>Difficulty: </legend>
 
 				<input type="checkbox" class="filled-in" id="class1" onchange="myFunction('#class1')"/>
-      			<label for="class1">Class 1 &nbsp </label>
+				<label for="class1">Class 1 &nbsp </label>
 
-      			<input type="checkbox" class="filled-in" id="class2" onchange="myFunction('#class2')"/>
-      			<label for="class2">Class 2 &nbsp </label>
+				<input type="checkbox" class="filled-in" id="class2" onchange="myFunction('#class2')"/>
+				<label for="class2">Class 2 &nbsp </label>
 
-      			<input type="checkbox" class="filled-in" id="class3" onchange="myFunction('#class3')"/>
-      			<label for="class3">Class 3 &nbsp </label>
+				<input type="checkbox" class="filled-in" id="class3" onchange="myFunction('#class3')"/>
+				<label for="class3">Class 3 &nbsp </label>
 
-      			<input type="checkbox" class="filled-in" id="class4" onchange="myFunction('#class4')"/>
-      			<label for="class4">Class 4 &nbsp </label>
-
-      			<script>
-				/*function myFunction(val) 
-					if ($(val)[0].checked){
-						alert("checked");
-					} else {
-						alert("Not checked");
-					}
-				    alert(val + $(val)[0].checked);
-				}*/
-				</script>
+				<input type="checkbox" class="filled-in" id="class4" onchange="myFunction('#class4')"/>
+				<label for="class4">Class 4 &nbsp </label>
 
 			</fieldset>
 
@@ -186,116 +168,116 @@
 				<legend>Four-Wheel Clearance: </legend>
 
 				<input type="checkbox" class="filled-in" id="twoWheel" onchange="myFunction('#twoWheel')"/>
-      			<label for="twoWheel">2 Wheel Drive &nbsp </label>
+				<label for="twoWheel">2 Wheel Drive &nbsp </label>
 
-      			<input type="checkbox" class="filled-in" id="fourWheel" onchange="myFunction('#fourWheel')"/>
-      			<label for="fourWheel">4x4 &nbsp </label>
+				<input type="checkbox" class="filled-in" id="fourWheel" onchange="myFunction('#fourWheel')"/>
+				<label for="fourWheel">4x4 &nbsp </label>
 
-      			<input type="checkbox" class="filled-in" id="extreme" onchange="myFunction('#extreme')"/>
-      			<label for="extreme">4x4 Extreme &nbsp </label>
+				<input type="checkbox" class="filled-in" id="extreme" onchange="myFunction('#extreme')"/>
+				<label for="extreme">4x4 Extreme &nbsp </label>
 
-      			<script>
-				var classCheckCount = 0;
-				function myFunction(val) {
-				    if($(val)[0].checked) { //checked
-						if(val == "#class1"){
-							classCheckCount = classCheckCount+1;
-							$.each(markers, function(i, marker){
-								if (marker.classification < 2 && marker.classification >= 1) {
-									marker.setVisible(true);
-								} else {
-									if (classCheckCount == 1){
-										marker.setVisible(false);
-									}										
-								}
-							});
-						} else if (val == "#class2") {
-							classCheckCount = classCheckCount+1;
-							$.each(markers, function(i, marker){
-								if (marker.classification < 3 && marker.classification >= 2) {
-									marker.setVisible(true);
-								} else {
-									if (classCheckCount == 1){
-										marker.setVisible(false);
+				<script>
+					var classCheckCount = 0;
+					function myFunction(val) {
+					if($(val)[0].checked) { //checked
+							if(val == "#class1"){
+								classCheckCount = classCheckCount+1;
+								$.each(markers, function(i, marker){
+									if (marker.classification < 2 && marker.classification >= 1) {
+										marker.setVisible(true);
+									} else {
+										if (classCheckCount == 1){
+											marker.setVisible(false);
+										}
 									}
-								}
-							});
-						} else if (val == "#class3") {
-							classCheckCount = classCheckCount+1;
-							$.each(markers, function(i, marker){
-								if (marker.classification < 4 && marker.classification >= 3) {
-									marker.setVisible(true);
-								} else {
-									if (classCheckCount == 1){
-										marker.setVisible(false);
+								});
+							} else if (val == "#class2") {
+								classCheckCount = classCheckCount+1;
+								$.each(markers, function(i, marker){
+									if (marker.classification < 3 && marker.classification >= 2) {
+										marker.setVisible(true);
+									} else {
+										if (classCheckCount == 1){
+											marker.setVisible(false);
+										}
 									}
-								}
-							});
-						} else if (val == "#class4") {
-							classCheckCount = classCheckCount+1;
-							$.each(markers, function(i, marker){
-								if (marker.classification < 5 && marker.classification >= 4) {
-									marker.setVisible(true);
-								} else {
-									if (classCheckCount == 1){
-										marker.setVisible(false);
+								});
+							} else if (val == "#class3") {
+								classCheckCount = classCheckCount+1;
+								$.each(markers, function(i, marker){
+									if (marker.classification < 4 && marker.classification >= 3) {
+										marker.setVisible(true);
+									} else {
+										if (classCheckCount == 1){
+											marker.setVisible(false);
+										}
 									}
-								}
-							});
-						} else {
-							alert("Error");
+								});
+							} else if (val == "#class4") {
+								classCheckCount = classCheckCount+1;
+								$.each(markers, function(i, marker){
+									if (marker.classification < 5 && marker.classification >= 4) {
+										marker.setVisible(true);
+									} else {
+										if (classCheckCount == 1){
+											marker.setVisible(false);
+										}
+									}
+								});
+							} else {
+								alert("Error");
+							}
+						}
+						else { //unchecked
+							if(val == "#class1"){
+								classCheckCount = classCheckCount-1;
+								$.each(markers, function(i, marker){
+									if (classCheckCount == 0) {
+										marker.setVisible(true);
+									} else {
+										if (marker.classification < 2 && marker.classification >= 1) {
+											marker.setVisible(false);
+										} 
+									}
+								});
+							} else if (val == "#class2") {
+								classCheckCount = classCheckCount-1;
+								$.each(markers, function(i, marker){
+									if (classCheckCount == 0) {
+										marker.setVisible(true);
+									} else {
+										if (marker.classification < 3 && marker.classification >= 2) {
+											marker.setVisible(false);
+										} 
+									}
+								});
+							} else if (val == "#class3") {
+								classCheckCount = classCheckCount-1;
+								$.each(markers, function(i, marker){
+									if (classCheckCount == 0) {
+										marker.setVisible(true);
+									} else {
+										if (marker.classification < 4 && marker.classification >= 3) {
+											marker.setVisible(false);
+										} 
+									}
+								});
+							} else if (val == "#class4") {
+								classCheckCount = classCheckCount-1;
+								$.each(markers, function(i, marker){
+									if (classCheckCount == 0) {
+										marker.setVisible(true);
+									} else {
+										if (marker.classification < 5 && marker.classification >= 4) {
+											marker.setVisible(false);
+										} 
+									}
+								});
+							} else {
+								alert("Error");
+							} 
 						}
 					}
-					else { //unchecked
-						if(val == "#class1"){
-							classCheckCount = classCheckCount-1;
-							$.each(markers, function(i, marker){
-								if (classCheckCount == 0) {
-									marker.setVisible(true);
-								} else {
-									if (marker.classification < 2 && marker.classification >= 1) {
-										marker.setVisible(false);
-									} 
-								}
-							});
-						} else if (val == "#class2") {
-							classCheckCount = classCheckCount-1;
-							$.each(markers, function(i, marker){
-								if (classCheckCount == 0) {
-									marker.setVisible(true);
-								} else {
-									if (marker.classification < 3 && marker.classification >= 2) {
-										marker.setVisible(false);
-									} 
-								}
-							});
-						} else if (val == "#class3") {
-							classCheckCount = classCheckCount-1;
-							$.each(markers, function(i, marker){
-								if (classCheckCount == 0) {
-									marker.setVisible(true);
-								} else {
-									if (marker.classification < 4 && marker.classification >= 3) {
-										marker.setVisible(false);
-									} 
-								}
-							});
-						} else if (val == "#class4") {
-							classCheckCount = classCheckCount-1;
-							$.each(markers, function(i, marker){
-								if (classCheckCount == 0) {
-									marker.setVisible(true);
-								} else {
-									if (marker.classification < 5 && marker.classification >= 4) {
-										marker.setVisible(false);
-									} 
-								}
-							});
-						} else {
-							alert("Error");
-						} 
-					}
-				}
 				</script>
 			</fieldset>
 
