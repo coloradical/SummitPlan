@@ -5,282 +5,44 @@
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 		<div id="map"></div>
-		<script>
-			var markers = []; //array of markers
-			function initMap() {
-			var castle = {lat: 39.180945, lng:-107.2416232};
-			var map = new google.maps.Map(document.getElementById('map'), {
-				zoom: 7,
-				center: castle,
-				mapTypeId: 'hybrid'
-
-
-			});
-			var infowindow = new google.maps.InfoWindow();
-			gon.fourteeners.forEach(function(fourteener){
-				if (fourteener.surname == "Mount") {
-					var full_name = fourteener.surname + " " +fourteener.name;
-				} else if (fourteener.surname == "Peak"){
-					var full_name = fourteener.name + " " + fourteener.surname;
-				} else if (fourteener.surname == "Mount of the "){
-					var full_name = fourteener.surname + " " + fourteener.name;
-				} else if (fourteener.surname == "Mountain"){
-					var full_name = fourteener.name + " " + fourteener.surname;
-				} else if (fourteener.surname == "Needle"){
-					var full_name = fourteener.name + " " + fourteener.surname;
-				} else if (fourteener.surname == "Point"){
-					var full_name = fourteener.name + " " + fourteener.surname;
-				} else {
-					var full_name = fourteener.name;
-				}
-				var marker = new google.maps.Marker({
-					position: {lat: fourteener.location_lat, lng: fourteener.location_long},
-					map: map,
-					title: full_name,
-					surname: fourteener.surname,
-					elevation_in_feet: fourteener.elevation_in_feet,
-					rank: fourteener.rank,
-					location_lat: fourteener.location_lat,
-					location_long: fourteener.location_long,
-					forest: fourteener.forest,
-					range: fourteener.range,
-					classification: fourteener.classification,
-					exposure: fourteener.exposure,
-					elevation_gain_in_feet: fourteener.elevation_gain_in_feet,
-					round_trip_distance_in_miles: fourteener.round_trip_distance_in_miles,
-					no_4wd_additional_elevation_in_feet: fourteener.no_4wd_additional_elevation_in_feet,
-					no_4wd_additional_distance_in_miles: fourteener.no_4wd_additional_distance_in_miles,
-					route_name: fourteener.route_name,
-					trailhead_name: fourteener.trailhead_name,
-					trailhead_lat: fourteener.trailhead_lat,
-					trailhead_long: fourteener.trailhead_long,
-					four_x_four_required: fourteener.four_x_four_required,
-					additional_info_url: fourteener.additional_info_url,
-					kml: fourteener.kml
-				});
-				if (marker.classification < 2) {
-					marker.setIcon('http://maps.google.com/mapfiles/ms/icons/green-dot.png');
-				} else if (marker.classification < 3) {
-					marker.setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png');
-				} else if (marker.classification < 4) {
-					marker.setIcon('http://maps.google.com/mapfiles/ms/icons/yellow-dot.png');
-				} else  {
-					marker.setIcon('http://maps.google.com/mapfiles/ms/icons/red-dot.png');
-				}
-				google.maps.event.addListener(marker, 'click', function() {
-					marker.setVisible(false); // maps API hide call
-				});
-				markers.push(marker); //add marker to array of markers
-				var contentString = '<div id="content">'+
-				  '<div id="siteNotice">'+
-				  '</div>'+
-				  '<h1 id="firstHeading" class="firstHeading">'+full_name+'</h1>'+
-				  '<div id="bodyContent">'+
-				  '<p>Elevation: '+marker.elevation_in_feet+' feet</br>'+
-				  'Class: '+marker.classification+'</br>'+
-				  'Range: '+marker.range+'</br>'+
-				  'Forest: '+marker.forest+'</br>'+
-				  'Route name: '+marker.route_name+'</br>'+
-				  'Trailhead name: '+marker.trailhead_name+'</br>'+
-				  'Round trip distance: '+marker.round_trip_distance_in_miles+' miles</br>'+
-				  'Elevation gain: '+marker.elevation_gain_in_feet+' feet</br></p>'+
-				  '<p><a href=\"'+marker.additional_info_url+'\">Click here for additional info</a></p>'+
-				  '</div>'+
-				  '</div>';
-				marker.addListener('click', function() {
-					map.setZoom(9);
-					map.setCenter(marker.getPosition());
-					infowindow.setContent(contentString);
-					infowindow.setPosition(marker.getPosition());
-					infowindow.open(marker.get('map'), marker);
-				});
-				});
-			}
-			$( function() {
-				$( "#slider-elevation" ).slider({
-					range: true,
-					min: 0,
-					max: 7500,
-					values: [ 0, 7500 ],
-					slide: function( event, ui ) {
-						$( "#elevation" ).val( ui.values[ 0 ] + "ft - " + ui.values[ 1 ] + "ft");
-						$.each(markers, function(i, marker){
-							if (marker.elevation_gain_in_feet < ui.values[ 0 ] || marker.elevation_gain_in_feet > ui.values[ 1 ]) {
-								marker.setVisible(false);
-							} else {
-								marker.setVisible(true);
-							}
-						});
-					}
-				});
-				$( "#elevation" ).val($( "#slider-elevation" ).slider( "values", 0 ) + "ft - "
-					+ $( "#slider-elevation" ).slider( "values", 1 ) + "ft" );
-			} );
-
-			$( function() {
-				$( "#slider-distance" ).slider({
-					range: true,
-					min: 0,
-					max: 26,
-					values: [ 0, 7500 ],
-					slide: function( event, ui ) {
-						$( "#distance" ).val( ui.values[ 0 ] + "miles - " + ui.values[ 1 ] + "miles");
-						$.each(markers, function(i, marker){
-							if (marker.round_trip_distance_in_miles < ui.values[ 0 ] || marker.round_trip_distance_in_miles > ui.values[ 1 ]) {
-								marker.setVisible(false);
-							} else {
-								marker.setVisible(true);
-							}
-						});
-					}
-				});
-				$( "#distance" ).val($( "#slider-distance" ).slider( "values", 0 ) + "miles - "
-					+ $( "#slider-distance" ).slider( "values", 1 ) + "miles" );
-			} );
-
-
-		</script>
-		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBYkGDkbDQBSWK4WoQM-r8tA5WXkqu_Rw&callback=initMap"></script>
-
 		<div id="sidebar">
-
 			<h6 style="padding-left: 10px; text-align: center; color: white;"><i> Use sliders and check boxes to find the right peak for you.</i></h6>
-
-
 			<fieldset>
 				<legend>Difficulty: </legend>
 
-				<input type="checkbox" class="filled-in" id="class1" onchange="myFunction('#class1')"/>
+				<input type="checkbox" class="filled-in" id="class1" checked/>
 				<label for="class1">Class 1 &nbsp </label>
 
-				<input type="checkbox" class="filled-in" id="class2" onchange="myFunction('#class2')"/>
+				<input type="checkbox" class="filled-in" id="class2" checked/>
 				<label for="class2">Class 2 &nbsp </label>
 
-				<input type="checkbox" class="filled-in" id="class3" onchange="myFunction('#class3')"/>
+				<input type="checkbox" class="filled-in" id="class3" checked/>
 				<label for="class3">Class 3 &nbsp </label>
 
-				<input type="checkbox" class="filled-in" id="class4" onchange="myFunction('#class4')"/>
+				<input type="checkbox" class="filled-in" id="class4" checked/>
 				<label for="class4">Class 4 &nbsp </label>
 
 			</fieldset>
 
-			<fieldset>
+			<!-- <fieldset>
 				<legend>Four-Wheel Clearance: </legend>
 
-				<input type="checkbox" class="filled-in" id="twoWheel" onchange="myFunction('#twoWheel')"/>
-				<label for="twoWheel">2 Wheel Drive &nbsp </label>
+				<input type="checkbox" class="filled-in" id="2wd" checked/>
+				<label for="2wd">2WD &nbsp </label>
 
-				<input type="checkbox" class="filled-in" id="fourWheel" onchange="myFunction('#fourWheel')"/>
-				<label for="fourWheel">4x4 &nbsp </label>
+				<input type="checkbox" class="filled-in" id="2hc"/>
+				<label for="2hc">High-Clearance 2WD &nbsp </label>
 
-				<input type="checkbox" class="filled-in" id="extreme" onchange="myFunction('#extreme')"/>
-				<label for="extreme">4x4 Extreme &nbsp </label>
+				<input type="checkbox" class="filled-in" id="awd"/>
+				<label for="awd">AWD &nbsp </label>
 
-				<script>
-					var classCheckCount = 0;
-					function myFunction(val) {
-						if($(val)[0].checked) { //checked
-							if(val == "#class1"){
-								classCheckCount = classCheckCount+1;
-								$.each(markers, function(i, marker){
-									if (marker.classification < 2 && marker.classification >= 1) {
-										marker.setVisible(true);
-									} else {
-										if (classCheckCount == 1){
-											marker.setVisible(false);
-										}
-									}
-								});
-							} else if (val == "#class2") {
-								classCheckCount = classCheckCount+1;
-								$.each(markers, function(i, marker){
-									if (marker.classification < 3 && marker.classification >= 2) {
-										marker.setVisible(true);
-									} else {
-										if (classCheckCount == 1){
-											marker.setVisible(false);
-										}
-									}
-								});
-							} else if (val == "#class3") {
-								classCheckCount = classCheckCount+1;
-								$.each(markers, function(i, marker){
-									if (marker.classification < 4 && marker.classification >= 3) {
-										marker.setVisible(true);
-									} else {
-										if (classCheckCount == 1){
-											marker.setVisible(false);
-										}
-									}
-								});
-							} else if (val == "#class4") {
-								classCheckCount = classCheckCount+1;
-								$.each(markers, function(i, marker){
-									if (marker.classification < 5 && marker.classification >= 4) {
-										marker.setVisible(true);
-									} else {
-										if (classCheckCount == 1){
-											marker.setVisible(false);
-										}
-									}
-								});
-							} else {
-								alert("Error");
-							}
-						}
-						else { //unchecked
-							if(val == "#class1"){
-								classCheckCount = classCheckCount-1;
-								$.each(markers, function(i, marker){
-									if (classCheckCount == 0) {
-										marker.setVisible(true);
-									} else {
-										if (marker.classification < 2 && marker.classification >= 1) {
-											marker.setVisible(false);
-										} 
-									}
-								});
-							} else if (val == "#class2") {
-								classCheckCount = classCheckCount-1;
-								$.each(markers, function(i, marker){
-									if (classCheckCount == 0) {
-										marker.setVisible(true);
-									} else {
-										if (marker.classification < 3 && marker.classification >= 2) {
-											marker.setVisible(false);
-										} 
-									}
-								});
-							} else if (val == "#class3") {
-								classCheckCount = classCheckCount-1;
-								$.each(markers, function(i, marker){
-									if (classCheckCount == 0) {
-										marker.setVisible(true);
-									} else {
-										if (marker.classification < 4 && marker.classification >= 3) {
-											marker.setVisible(false);
-										} 
-									}
-								});
-							} else if (val == "#class4") {
-								classCheckCount = classCheckCount-1;
-								$.each(markers, function(i, marker){
-									if (classCheckCount == 0) {
-										marker.setVisible(true);
-									} else {
-										if (marker.classification < 5 && marker.classification >= 4) {
-											marker.setVisible(false);
-										} 
-									}
-								});
-							} else {
-								alert("Error");
-							}
-						}
-					}
-				</script>
-			</fieldset>
+				<input type="checkbox" class="filled-in" id="4x4"/>
+				<label for="4x4">4x4 &nbsp </label>
+			</fieldset> -->
 
+
+			<p><label for="vehicle">Trailhead Accessibility</label><input type="text" id="vehicle" readonly style="border:0; color:#f6931f; font-weight:bold;"></p>
+			<div id="slider-vehicle"></div>
 
 			<p><label for="elevation">Elevation Gain:</label><input type="text" id="elevation" readonly style="border:0; color:#f6931f; font-weight:bold;"></p>
 			<div id="slider-elevation"></div>
@@ -289,4 +51,326 @@
 			<div id="slider-distance"></div>
 
 		</div>
+
+<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBBYkGDkbDQBSWK4WoQM-r8tA5WXkqu_Rw&callback=initMap"></script>
+<script type="text/javascript">
+	var markers = []; //array of markers
+	function initMap() {
+		var castle = {lat: 39.180945, lng:-107.2416232};
+		var map = new google.maps.Map(document.getElementById('map'), {
+			zoom: 7,
+			center: castle,
+			mapTypeId: 'hybrid'
+		});
+		var infowindow = new google.maps.InfoWindow();
+		gon.fourteeners.forEach(function(fourteener){
+			if (fourteener.surname == "Mount") {
+				var full_name = fourteener.surname + " " +fourteener.name;
+			} else if (fourteener.surname == "Peak"){
+				var full_name = fourteener.name + " " + fourteener.surname;
+			} else if (fourteener.surname == "Mount of the "){
+				var full_name = fourteener.surname + " " + fourteener.name;
+			} else if (fourteener.surname == "Mountain"){
+				var full_name = fourteener.name + " " + fourteener.surname;
+			} else if (fourteener.surname == "Needle"){
+				var full_name = fourteener.name + " " + fourteener.surname;
+			} else if (fourteener.surname == "Point"){
+				var full_name = fourteener.name + " " + fourteener.surname;
+			} else {
+				var full_name = fourteener.name;
+			}
+			var marker = new google.maps.Marker({
+				position: {lat: fourteener.location_lat, lng: fourteener.location_long},
+				map: map,
+				title: full_name,
+				surname: fourteener.surname,
+				elevation_in_feet: fourteener.elevation_in_feet,
+				rank: fourteener.rank,
+				location_lat: fourteener.location_lat,
+				location_long: fourteener.location_long,
+				forest: fourteener.forest,
+				range: fourteener.range,
+				classification: fourteener.classification,
+				exposure: fourteener.exposure,
+				elevation_gain_in_feet: fourteener.elevation_gain_in_feet,
+				round_trip_distance_in_miles: fourteener.round_trip_distance_in_miles,
+				no_4wd_additional_elevation_in_feet: fourteener.no_4wd_additional_elevation_in_feet,
+				no_4wd_additional_distance_in_miles: fourteener.no_4wd_additional_distance_in_miles,
+				route_name: fourteener.route_name,
+				trailhead_name: fourteener.trailhead_name,
+				trailhead_lat: fourteener.trailhead_lat,
+				trailhead_long: fourteener.trailhead_long,
+				four_x_four_required: fourteener.four_x_four_required,
+				additional_info_url: fourteener.additional_info_url,
+				kml: fourteener.kml
+			});
+			if (marker.classification < 2) {
+				marker.setIcon('http://maps.google.com/mapfiles/ms/icons/green-dot.png');
+			} else if (marker.classification < 3) {
+				marker.setIcon('http://maps.google.com/mapfiles/ms/icons/blue-dot.png');
+			} else if (marker.classification < 4) {
+				marker.setIcon('http://maps.google.com/mapfiles/ms/icons/yellow-dot.png');
+			} else  {
+				marker.setIcon('http://maps.google.com/mapfiles/ms/icons/red-dot.png');
+			}
+			markers.push(marker); //add marker to array of markers
+			var contentString = '<div id="content">'+
+			  '<div id="siteNotice">'+
+			  '</div>'+
+			  '<h1 id="firstHeading" class="firstHeading">'+full_name+'</h1>'+
+			  '<div id="bodyContent">'+
+			  '<p>Elevation: '+marker.elevation_in_feet+' feet</br>'+
+			  'Class: '+marker.classification+'</br>'+
+			  'Range: '+marker.range+'</br>'+
+			  'Forest: '+marker.forest+'</br>'+
+			  'Route name: '+marker.route_name+'</br>'+
+			  'Trailhead name: '+marker.trailhead_name+'</br>'+
+			  'Round trip distance: '+marker.round_trip_distance_in_miles+' miles</br>'+
+			  'Elevation gain: '+marker.elevation_gain_in_feet+' feet</br></p>'+
+			  '<p><a href=\"'+marker.additional_info_url+'\">Click here for additional info</a></p>'+
+			  'Road Decimal: ' + marker.four_x_four_required + '<br>'+
+			  '</div>'+
+			  '</div>';
+			marker.addListener('click', function() {
+				map.setZoom(11);
+				map.setCenter(marker.getPosition());
+				infowindow.setContent(contentString);
+				infowindow.setPosition(marker.getPosition());
+				infowindow.open(marker.get('map'), marker);
+			});
+		});
+	}
+	
+
+	function visible(marker){
+		return marker.visible
+	}
+
+	function classOnes(marker){
+		return marker.classification < 2;
+	}
+
+	function classTwos(marker){
+		return marker.classification < 3 && marker.classification >= 2;
+	}
+
+	function classThrees(marker){
+		return marker.classification < 4 && marker.classification >= 3;
+	}
+
+	function classFours(marker){
+		return marker.classification < 5 && marker.classification >= 4;
+	}
+
+	function twoWheelDrive(marker){
+		return marker.four_x_four_required == 0;
+	}
+
+	function twoHighClearance(marker){
+		return marker.four_x_four_required < 1;
+	}
+
+	function allWheelDrive(marker){
+		return marker.four_x_four_required > 1;
+	}
+
+	function fourByFour(marker){
+		return marker.four_x_four_required = 2 ;
+	}
+
+	$('#class1').change(function(){
+		if( !$(this)[0].checked ){
+			var ones = markers.filter(classOnes);
+			$.each(ones, function(i, marker){
+				marker.setVisible(false);
+			});
+		}
+		else{
+			var ones = markers.filter(classOnes);
+			$.each(ones, function(i, marker){
+				marker.setVisible(true);
+			});
+		}
+	});
+
+	$('#class2').change(function(){
+		if( !$(this)[0].checked ){
+			var ones = markers.filter(classTwos);
+			$.each(ones, function(i, marker){
+				marker.setVisible(false);
+			});
+		}
+		else{
+			var ones = markers.filter(classTwos);
+			$.each(ones, function(i, marker){
+				marker.setVisible(true);
+			});
+		}
+	});
+
+	$('#class3').change(function(){
+		if( !$(this)[0].checked ){
+			var ones = markers.filter(classThrees);
+			$.each(ones, function(i, marker){
+				marker.setVisible(false);
+			});
+		}
+		else{
+			var ones = markers.filter(classThrees);
+			$.each(ones, function(i, marker){
+				marker.setVisible(true);
+			});
+		}
+	});
+
+	$('#class4').change(function(){
+		if( !$(this)[0].checked ){
+			var ones = markers.filter(classFours);
+			$.each(ones, function(i, marker){
+				marker.setVisible(false);
+			});
+		}
+		else{
+			var ones = markers.filter(classFours);
+			$.each(ones, function(i, marker){
+				marker.setVisible(true);
+			});
+		}
+	});
+	
+	$('#2wd').change(function(){
+		if( !$(this)[0].checked ){
+			var ones = markers.filter(twoWheelDrive);
+			$.each(ones, function(i, marker){
+				marker.setVisible(false);
+			});
+		}
+		else{
+			var ones = markers.filter(twoWheelDrive);
+			$.each(ones, function(i, marker){
+				marker.setVisible(true);
+			});
+		}
+	});
+
+	$('#2hc').change(function(){
+		if( !$(this)[0].checked ){
+			var ones = markers.filter(twoHighClearance);
+			$.each(ones, function(i, marker){
+				marker.setVisible(false);
+			});
+		}
+		else{
+			var ones = markers.filter(twoHighClearance);
+			$.each(ones, function(i, marker){
+				marker.setVisible(true);
+			});
+		}
+	});
+
+	$('#awd').change(function(){
+		if( !$(this)[0].checked ){
+			var ones = markers.filter(allWheelDrive);
+			$.each(ones, function(i, marker){
+				marker.setVisible(false);
+			});
+		}
+		else{
+			var ones = markers.filter(allWheelDrive);
+			$.each(ones, function(i, marker){
+				marker.setVisible(true);
+			});
+		}
+	});
+
+	$('#4x4').change(function(){
+		if( !$(this)[0].checked ){
+			var ones = markers.filter(fourByFour).filter;
+			$.each(ones, function(i, marker){
+				marker.setVisible(false);
+			});
+		}
+		else{
+			var ones = markers.filter(fourByFour);
+			$.each(ones, function(i, marker){
+				marker.setVisible(true);
+			});
+		}
+	});
+
+	function accessibility(num){
+		if (num == 1) return "2 Wheel Drive";
+		if (num == 2) return "High-Clearance 2WD";
+		if (num == 3) return "AWD / 4X4 Recommended"
+		else return "High-Clearance 4X4 Required";
+	}
+
+	$(function() {
+		$("#slider-vehicle").slider({
+			value: 4,
+			// range: false,
+			min: 1,
+			max: 4,
+			step: 1,
+			slide: function(event, ui){
+					$("#vehicle").val(accessibility(ui.value));
+					$.each(markers.filter(visible), function(i, marker){
+						console.log("UI Value: " + ui.value);
+						if (marker.four_x_four_required > ui.value){
+							marker.setVisible(false);
+						}
+						else{
+							marker.setVisible(true);
+						}
+					});
+					}
+		});
+		$("#vehicle").val(accessibility($("#slider-vehicle").slider("value")));
+
+	});
+
+	$(function() {
+		$("#slider-elevation").slider({
+			range: true,
+			min: 1500,
+			max: 7500,
+			values: [0, 7500],
+			slide: function( event, ui ) {
+				$("#elevation").val(ui.values[0] + "ft - " + ui.values[ 1 ] + "ft");
+				$.each(markers.filter(visible), function(i, marker){
+					if (marker.elevation_gain_in_feet < ui.values[ 0 ] || marker.elevation_gain_in_feet > ui.values[ 1 ]) {
+						marker.setVisible(false);
+					} else {
+						marker.setVisible(true);
+					}
+				});
+			}
+		});
+		$( "#elevation" ).val($( "#slider-elevation" ).slider( "values", 0 ) + "ft - "
+			+ $( "#slider-elevation" ).slider( "values", 1 ) + "ft" );
+	});
+
+	$(function() {
+		$("#slider-distance").slider({
+			range: true,
+			min: 0,
+			max: 26,
+			values: [0, 26],
+			slide: function(event, ui) {
+				$("#distance").val(ui.values[0] + "miles - " + ui.values[ 1 ] + "miles");
+				$.each(markers.filter(visible), function(i, marker){
+					if (marker.round_trip_distance_in_miles < ui.values[ 0 ] || marker.round_trip_distance_in_miles > ui.values[ 1 ]) {
+						marker.setVisible(false);
+					} else {
+						marker.setVisible(true);
+					}
+				});
+			}
+		});
+		$("#distance").val($("#slider-distance").slider("values", 0) + "miles - "
+			+ $("#slider-distance").slider("values", 1) + "miles");
+	});
+
+
+</script>
 
