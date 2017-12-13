@@ -170,9 +170,14 @@
       			<label for="class4">Class 4 &nbsp </label>
 
       			<script>
-				function myFunction(val) {
+				/*function myFunction(val) 
+					if ($(val)[0].checked){
+						alert("checked");
+					} else {
+						alert("Not checked");
+					}
 				    alert(val + $(val)[0].checked);
-				}
+				}*/
 				</script>
 
 			</fieldset>
@@ -191,7 +196,46 @@
 
       			<script>
 				function myFunction(val) {
-				    alert(val + $(val)[0].checked);
+				    if($(val)[0].checked) { //checked
+						if(val == "#class1"){
+							$.each(markers, function(i, marker){
+								if (marker.classification < 2 && marker.classification >= 1) {
+									marker.setVisible(true);
+								} else {
+									marker.setVisible(false);
+								}
+							});
+						} else if (val == "#class2") {
+							$.each(markers, function(i, marker){
+								if (marker.classification < 3 && marker.classification >= 2) {
+									marker.setVisible(true);
+								} else {
+									marker.setVisible(false);
+								}
+							});
+						} else if (val == "#class3") {
+							$.each(markers, function(i, marker){
+								if (marker.classification < 4 && marker.classification >= 3) {
+									marker.setVisible(true);
+								} else {
+									marker.setVisible(false);
+								}
+							});
+						} else if (val == "#class4") {
+							$.each(markers, function(i, marker){
+								if (marker.classification < 5 && marker.classification >= 4) {
+									marker.setVisible(true);
+								} else {
+									marker.setVisible(false);
+								}
+							});
+						} else {
+							alert("Error");
+						}
+					}
+					else { //unchecked
+						alert("why are you like this"); 
+					}
 				}
 				</script>
 			</fieldset>
