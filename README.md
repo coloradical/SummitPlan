@@ -8,7 +8,7 @@ The Mountaineers
 [Megan Byers](https://github.com/coloradical), [Lucas Reed](https://github.com/lure7991), [Lindsay Walton](https://github.com/lawalton) & [Elliot Whitehead](https://github.com/elliotwhitehead)
 
 ## Description
-Summit Plan is a website that allows you to enter criteria to find the perfect 14er (or hiking trails depending on how much effort we want to put in this) to hike.
+Summit Plan is a website that allows you to enter criteria to find the perfect 14er to hike.
 * Enter criteria like hike length, skill level, distance from home and more to help you choose the best 14er to climb
 * Aggregates weather averages from past years to determine when it's safest to be on that particular mountain
 * Live weather updates
