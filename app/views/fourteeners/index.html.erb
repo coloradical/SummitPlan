@@ -314,7 +314,6 @@
 			slide: function(event, ui){
 					$("#vehicle").val(accessibility(ui.value));
 					$.each(markers.filter(visible), function(i, marker){
-						console.log("UI Value: " + ui.value);
 						if (marker.four_x_four_required > ui.value){
 							marker.setVisible(false);
 						}
