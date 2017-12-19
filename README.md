@@ -23,12 +23,13 @@ Most of our app was setup and organized by the Ruby on Rails installation.
 
 Two files hold the main html source for the project:
 
-Main Homepage: `app/views/fourteeners/index.html.erb`
+Main Homepage: [app/views/fourteeners/index.html.erb](app/views/fourteeners/index.html.erb)
 
-Fourteener Specific Page: `app/views/fourteeners/shows.html.erb`
+Fourteener Specific Page: [app/views/fourteeners/show.html.erb](app/views/fourteeners/show.html.erb)
 
-Both of these files inherit structure from the application html page found at: `app/views/layouts/application.html.erb
+Both of these files inherit structure from the application html page found at: [app/views/layouts/application.html.erb](app/views/layouts/application.html.erb)
 
+Our **milestone documents** can be found in [docs/milestones](docs/milestones)
 
 
 ## Installation
