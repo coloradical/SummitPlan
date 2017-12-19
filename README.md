@@ -19,11 +19,17 @@ Summit Plan is a website that allows you to enter criteria to find the perfect 1
 * Overall interactive map showing where all the 14ers are
 
 ## File Structure
-Most of our app was setup and organized using the Ruby on Rails convention. Two files hold the main source code for this project:
+Most of our app was setup and organized by the Ruby on Rails installation.
 
-Main Homepage: app/views/fourteeners/index.html.erb
+Two files hold the main html source for the project:
 
-Fourteener Specific Page: app/views/fourteeners/shows.html.erb
+Main Homepage: `app/views/fourteeners/index.html.erb`
+
+Fourteener Specific Page: `app/views/fourteeners/shows.html.erb`
+
+Both of these files inherit structure from the application html page found at: `app/views/layouts/application.html.erb
+
+
 
 ## Installation
 You can easily install and set up this project thanks to containerization from [Docker](https://docker.com)!
@@ -47,5 +53,13 @@ You can easily install and set up this project thanks to containerization from [
       * `docker-compose run`: used to run a command against a docker-compose service
       * `web`: the service to run the command against. `web` is the Rails web server described (and named 'web') in the docker-compose.yml file
       * `rake db:create`: a ruby command which uses Rake to build and create our database, as described in the `config/database.yml` file
-7. Now, run `docker-compose up` again, and it should boot up with no problems!
-8. Hooray! You're done!
+7. Now you need to initialize the database with all of the appropriate columns to match our data model. To do so, run: 
+```shell 
+docker-compose run web rails db:migrate
+```
+8. Finally, to populate the databse with all of the fourteeners and an admin user, run: 
+```shell
+docker-compose run web rails db:seed
+```
+9. Now, run `docker-compose up` again, and it should boot up with no problems!
+10. Hooray! You're done!
